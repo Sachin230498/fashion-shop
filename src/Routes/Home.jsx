@@ -35,7 +35,7 @@ export const Home=()=>{
       }if(scrollCheck>900){
         setactive("dots3")
         setColor('White')
-      }if(scrollCheck>1789){
+      }if(scrollCheck>3000){
         setactive("dots4")
         setColor('Black')
       }

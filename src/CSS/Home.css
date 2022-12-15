@@ -5,10 +5,16 @@ body, html {
     scroll-snap-type:both mandatory;
 
   }
+
   *{
     box-sizing: border-box !important;
     font-family:"Times New Roman" !important;
   }
+  .homeMain{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
   .border{
     border:1px solid yellow;
   }
