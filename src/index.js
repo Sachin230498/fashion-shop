@@ -7,16 +7,20 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import reportWebVitals from "./reportWebVitals";
+import { theme } from "./Theme/theme.config";
+import { AuthContextProvider } from "./Context/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-    <ChakraProvider>
       <BrowserRouter>
-        <App />
+        <AuthContextProvider>
+          <ChakraProvider theme={theme}>
+            <App />
+          </ChakraProvider>
+        </AuthContextProvider>
       </BrowserRouter>
-    </ChakraProvider>
     </Provider>
   </React.StrictMode>
 );
