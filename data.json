@@ -476,5 +476,31 @@
       "image": "https://user-images.githubusercontent.com/101625055/207602757-f62824c2-0229-4bfd-9d2d-9cc973fd893a.jpg",
       "price": 3196
     }
+  ],
+  "random": [
+    {
+      "id": 1,
+      "name": "PRINTED PLUSH SET1",
+      "image": "https://user-images.githubusercontent.com/101625055/207594636-e602b9a4-5b8b-454f-aa9b-aa7ea77483a1.jpg",
+      "price": 3009
+    },
+    {
+      "id": 2,
+      "name": "PRINTED PLUSH SET2",
+      "image": "https://user-images.githubusercontent.com/101625055/207594665-3aec0276-6d52-4ea1-be30-0b2fe55a84a5.jpg",
+      "price": 1934
+    },
+    {
+      "id": 3,
+      "name": "DOUBLE-FACED FAUX SHEARLING COAT",
+      "image": "https://user-images.githubusercontent.com/101625055/207594684-3422c497-8cda-431f-8181-f1a543e1fad0.jpg",
+      "price": 4215
+    },
+    {
+      "id": 4,
+      "name": "DOUBLE-FACED FAUX SHEARLING COAT",
+      "image": "https://user-images.githubusercontent.com/101625055/207594703-09edb7a9-5af0-495f-a862-f5456153769f.jpg",
+      "price": 1962
+    }
   ]
 }
