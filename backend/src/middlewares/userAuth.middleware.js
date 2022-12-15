@@ -14,6 +14,9 @@ const Auth=async (req,res,next)=>{
         }
         let varification= jwt.verify(token,process.env.TokenSecret)
         if(varification){
+            console.log(varification)
+            req.userType=varification.role
+            req.userId=varification.id
             next()
         }else{
             res.status(401).send("invalid token")
@@ -42,6 +45,7 @@ const AdminAuth=async (req,res,next)=>{
             let varification=jwt.verify(token,process.env.ADMINSEC)
 
             if(varification){
+                
                 req.userType="admin"
                 console.log("admin ")
                 next()

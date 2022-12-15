@@ -6,7 +6,7 @@ let cors=require("cors")
 let PORT=process.env.PORT
 let connect=require("./config/db")
 let userRoute=require("./routes/user.route")
-// let blogRoute=require("./features/blog/blog.Route")
+let shopRoute=require("./routes/shop.route")
 // let passport=require("./features/oauth/githubAuth")
 const {Server}=require("socket.io")
 const Redis = require('ioredis');
@@ -30,7 +30,7 @@ req.redis=redis
 next()
 })
 app.use("/users",userRoute)
-// app.use("/blogs",blogRoute)
+app.use("/shop",shopRoute)
 
 
 

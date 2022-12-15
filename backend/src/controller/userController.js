@@ -4,7 +4,7 @@ const User=require("../module/user.module")
 const dustbin=require("../module/dustbin.model")
 const userSignup=(async (req,res)=>{
      
-    let {email,password,name,gender,role,pic,DOB,mobaile}=req.body
+    let {email,password,name,gender,role,pic,DOB,mobile}=req.body
         password= await argon2.hash(password);
         if(role=="admin"){
             return res.send("wrong credentials")
@@ -75,11 +75,11 @@ const RefreshUser=(async(req,res)=>{
         let refresh=req.headers["authorization"]
     let varify=jwt.verify(refresh,process.env.RefreshSecret)
     if(varify){
-        let token=jwt.sign({id:varify.id,email:varify.email,role:user.role},process.env.TokenSecret,{expiresIn:"1 hours"})
+        let token=jwt.sign({id:varify.id,email:varify.email,role:varify.role},process.env.TokenSecret,{expiresIn:"1 hours"})
         return res.send({message:"refresh done",token})
 
     }else{
-        await dustbin.create({token})
+        await dustbin.create({refresh})
         return res.status(404).send("login again")
     }
     }catch(e){

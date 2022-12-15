@@ -1,12 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import LoginSignup from './pages/LoginSignup';
+
+
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-   <h1>ZARA.COM</h1>
-    </div>
-  );
+return(
+  <>
+  <LoginSignup />
+  </>
+)
+  
 }
 
 export default App;
