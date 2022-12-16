@@ -1,5 +1,5 @@
 {
-  "kids": [
+  "girls": [
     {
       "id": 1,
       "name": "PUFFER COAT WITH RUBBERISED DETAI",
@@ -32,6 +32,128 @@
     },
     {
       "id": 6,
+      "name": "WOOL BLEND COAT",
+      "image": "https://user-images.githubusercontent.com/101625055/207590160-8cd85849-5c01-4462-b5fc-434e292caedb.jpg",
+      "price": 1898
+    },
+    {
+      "id": 7,
+      "name": "PADDED SKI JUMPSUIT",
+      "image": "https://user-images.githubusercontent.com/101625055/207590185-a5e86198-4964-40d2-bd35-47efab384e7b.jpg",
+      "price": 2632
+    },
+    {
+      "id": 8,
+      "name": "PADDED SKI JUMPSUIT",
+      "image": "https://user-images.githubusercontent.com/101625055/207590206-40111926-c3b0-4c5c-85b3-6370aef44607.jpg",
+      "price": 1657
+    },
+    {
+      "id": 9,
+      "name": "FLOCKED VARSITY BOMBER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/207590224-77d8c3e0-c6d6-49e6-93df-bc724cba40e9.jpg",
+      "price": 2925
+    },
+    {
+      "id": 10,
+      "name": "FLOCKED VARSITY BOMBER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/207590243-35a325ed-d288-46a3-b590-127b390bdc26.jpg",
+      "price": 4784
+    },
+    {
+      "id": 11,
+      "name": "DRESS WITH STUDDED BELT",
+      "image": "https://user-images.githubusercontent.com/101625055/207590255-f2377061-29f1-43d9-b358-5cf54a90dad3.jpg",
+      "price": 1865
+    },
+    {
+      "id": 12,
+      "name": "DRESS WITH STUDDED BELT",
+      "image": "https://user-images.githubusercontent.com/101625055/207590272-acd54159-41e7-4a9c-9817-36bd35335b50.jpg",
+      "price": 2965
+    },
+    {
+      "id": 13,
+      "name": "T-SHIRT WITH FRINGES",
+      "image": "https://user-images.githubusercontent.com/101625055/207590291-f5944d71-5b0b-4d9f-becb-903bc2907323.jpg",
+      "price": 3531
+    },
+    {
+      "id": 14,
+      "name": "T-SHIRT WITH FRINGES",
+      "image": "https://user-images.githubusercontent.com/101625055/207590342-180a3ec6-f316-4b05-b87d-95849f967bc2.jpg",
+      "price": 3670
+    },
+    {
+      "id": 15,
+      "name": "MATCHING BALLOON DRESS",
+      "image": "https://user-images.githubusercontent.com/101625055/207590359-8ddf7c1f-d211-4642-97af-edee7a2a7709.jpg",
+      "price": 3077
+    },
+    {
+      "id": 16,
+      "name": "MATCHING BALLOON DRESS",
+      "image": "https://user-images.githubusercontent.com/101625055/207590373-b23f10a7-e02c-4725-820b-1d025f9418d9.jpg",
+      "price": 2856
+    },
+    {
+      "id": 17,
+      "name": "WIND-PROOF AND WATER-REPELLENT SKI PUFFER JAC",
+      "image": "https://user-images.githubusercontent.com/101625055/207590388-e4ba492c-8d80-4e66-bf92-bf07bfb20091.jpg",
+      "price": 1722
+    },
+    {
+      "id": 18,
+      "name": "WIND-PROOF AND WATER-REPELLENT SKI PUFFER JAC",
+      "image": "https://user-images.githubusercontent.com/101625055/207590409-4ac3ade5-e885-4a7c-bb11-0a8f41ce4245.jpg",
+      "price": 2395
+    },
+    {
+      "id": 19,
+      "name": "EXTRA LONG FEATHER DOWN JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/207590426-46878467-f1b0-4019-b60d-4b23134a131d.jpg",
+      "price": 3407
+    },
+    {
+      "id": 20,
+      "name": "EXTRA LONG FEATHER DOWN JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/207589840-02b3e7ac-fe0d-4167-84c8-2f8d49987d2e.jpg",
+      "price": 1858
+    }
+  ],
+  "boys": [
+    {
+      "id": 1,
+      "name": "EMBROIDERED SCALLOPED BOMBER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/207594545-a3e9ea34-e71c-4ec5-bc85-8db5e5e9b638.jpg",
+      "price": 3973
+    },
+    {
+      "id": 2,
+      "name": "EMBROIDERED SCALLOPED BOMBER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/207594564-0b02198c-b7ef-40da-b876-2ac94c087737.jpg",
+      "price": 2177
+    },
+    {
+      "id": 3,
+      "name": "FAUX LEATHER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/207594578-0cfd264d-2f96-4863-8688-a5b34ea694a1.jpg",
+      "price": 1869
+    },
+    {
+      "id": 4,
+      "name": "SYNTHETIC WOOL COAT",
+      "image": "https://user-images.githubusercontent.com/101625055/207594593-758a74e3-2bca-4e35-9817-95cc526a4ef1.jpg",
+      "price": 2586
+    },
+    {
+      "id": 5,
+      "name": "PRINTED PLUSH SET",
+      "image": "https://user-images.githubusercontent.com/101625055/207594608-c8ff75a2-86a1-499e-b9b3-0caa8c9d802a.jpg",
+      "price": 1727
+    },
+    {
+      "id": 6,
       "name": "PRINTED PLUSH SET",
       "image": "https://user-images.githubusercontent.com/101625055/207594619-d412d20d-f42f-4297-8909-0581fa225bb7.jpg",
       "price": 4540
@@ -58,6 +180,128 @@
       "id": 10,
       "name": "DOUBLE-FACED FAUX SHEARLING COAT",
       "image": "https://user-images.githubusercontent.com/101625055/207594703-09edb7a9-5af0-495f-a862-f5456153769f.jpg",
+      "price": 1962
+    },
+    {
+      "id": 11,
+      "name": "WOOL BLEND NAUTICAL COAT",
+      "image": "https://user-images.githubusercontent.com/101625055/207594718-ea9c98d7-f96b-4a25-828a-e5eeeeaedb39.jpg",
+      "price": 3536
+    },
+    {
+      "id": 12,
+      "name": "WOOL BLEND NAUTICAL COAT",
+      "image": "https://user-images.githubusercontent.com/101625055/207594729-dbdde169-5c60-4daf-b8c7-1555c4f28652.jpg",
+      "price": 2819
+    },
+    {
+      "id": 13,
+      "name": "DENIM JACKET WITH FAUX SHEARLIN",
+      "image": "https://user-images.githubusercontent.com/101625055/207594747-9da4fbec-d76b-4407-a2a5-edf0bc23a23e.jpg",
+      "price": 4013
+    },
+    {
+      "id": 14,
+      "name": "DENIM JACKET WITH FAUX SHEARLING",
+      "image": "https://user-images.githubusercontent.com/101625055/207594765-f3e0ee41-6faa-4b74-b4b1-cd40cec76d9a.jpg",
+      "price": 4779
+    },
+    {
+      "id": 15,
+      "name": "PLAIN THERMO-SEALED PUFFER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/207594786-8b284251-87e2-41fe-982b-9798cd6c0bda.jpg",
+      "price": 3593
+    },
+    {
+      "id": 16,
+      "name": "PLAIN THERMO-SEALED PUFFER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/207594800-1896fa63-6ffa-4140-a123-71bb150e979e.jpg",
+      "price": 4899
+    },
+    {
+      "id": 17,
+      "name": "JACQUARD KNIT SWEATER",
+      "image": "https://user-images.githubusercontent.com/101625055/207594818-d70bdad0-95f6-4e2e-9202-3b922c481f43.jpg",
+      "price": 5263
+    },
+    {
+      "id": 18,
+      "name": "GRAFFITI HOODIE",
+      "image": "https://user-images.githubusercontent.com/101625055/207594842-2e97d348-99cf-48a2-b324-b8c7096be257.jpg",
+      "price": 2759
+    },
+    {
+      "id": 19,
+      "name": "PRINTED PLUSH SET",
+      "image": "https://user-images.githubusercontent.com/101625055/207594885-f1080639-e24d-4b12-9981-4461568e0bea.jpg",
+      "price": 5461
+    },
+    {
+      "id": 20,
+      "name": "DOWN AND FEATHER PUFFER JACKET WITH MAXI ",
+      "image": "https://user-images.githubusercontent.com/101625055/207594863-3d3cb74b-9837-4cd9-81c1-b2e80e016046.jpg",
+      "price": 3196
+    }
+  ],
+  "shoes": [
+    {
+      "id": 1,
+      "name": "KIDS/ RAIN BOOTS TRETORN X ZARA",
+      "image": "https://user-images.githubusercontent.com/101625055/207598685-86fee92f-3259-4467-bf59-ba7c2b74fbef.jpg",
+      "price": 3973
+    },
+    {
+      "id": 2,
+      "name": "KIDS/ RAIN BOOTS TRETORN X ZARA",
+      "image": "https://user-images.githubusercontent.com/101625055/207598703-f3f62b8c-c701-4cfb-90f4-7cca99a061a0.jpg",
+      "price": 2177
+    },
+    {
+      "id": 3,
+      "name": "KIDS/ KNEE-HIGH TRACK BOOTS",
+      "image": "https://user-images.githubusercontent.com/101625055/207598870-9e8dbc53-df82-4c31-85aa-4c4d102d97f1.jpg",
+      "price": 1869
+    },
+    {
+      "id": 4,
+      "name": "KIDS/ STUDDED CHELSEA BOOTS",
+      "image": "https://user-images.githubusercontent.com/101625055/207598926-bf25c1a1-7707-4e9e-a98a-4cb839777150.jpg",
+      "price": 2586
+    },
+    {
+      "id": 5,
+      "name": "KIDS/ TRACK SOLE ANKLE BOOTS",
+      "image": "https://user-images.githubusercontent.com/101625055/207598945-2fa49a57-f6ec-4601-8292-d11dec2595cb.jpg",
+      "price": 1727
+    },
+    {
+      "id": 6,
+      "name": "KIDS/ TRACK SOLE ANKLE BOOTS",
+      "image": "https://user-images.githubusercontent.com/101625055/207598966-13cffa7f-f245-4b87-ba4b-a46848c0d8ee.jpg",
+      "price": 4540
+    },
+    {
+      "id": 7,
+      "name": "KIDS/ BALLET FLATS WITH RHINESTONES",
+      "image": "https://user-images.githubusercontent.com/101625055/207598985-e5477e1f-642a-494f-88ed-64b6895792bc.jpg",
+      "price": 3009
+    },
+    {
+      "id": 8,
+      "name": "KIDS/ RHINESTONE ANKLE BOOTS",
+      "image": "https://user-images.githubusercontent.com/101625055/207599007-08b29c7d-f5e4-4b20-804c-54ad82918e59.jpg",
+      "price": 1934
+    },
+    {
+      "id": 9,
+      "name": "KIDS/ EMBELLISHED LOAFERS",
+      "image": "https://user-images.githubusercontent.com/101625055/207599022-692d380d-3191-4f72-8949-3b32374fa759.jpg",
+      "price": 4215
+    },
+    {
+      "id": 10,
+      "name": "KIDS/ LOAFERS WITH TRACK SOLES",
+      "image": "https://user-images.githubusercontent.com/101625055/207599043-53f59a40-d47f-42f7-8cbf-702a9bc1f508.jpg",
       "price": 1962
     },
     {
@@ -182,12 +426,7 @@
       "image": "https://user-images.githubusercontent.com/101625055/207602529-9da812dd-4050-40c8-a654-5a30acc7de04.jpg",
       "price": 1962
     },
-    {
-      "id": 11,
-      "name": "Wool blend scarf",
-      "image": "https://user-images.githubusercontent.com/101625055/207602867-551d03af-b252-4bd0-a672-6ad40c052089.jpg",
-      "price": 3536
-    },
+    { "id": 11, "name": "Wool blend scarf", "image": "Female", "price": 3536 },
     {
       "id": 12,
       "name": "Textured puffer jacket",
@@ -200,12 +439,7 @@
       "image": "https://user-images.githubusercontent.com/101625055/207602579-3e70f991-80d9-470d-b4f2-b2dd16599da2.jpg",
       "price": 4013
     },
-    {
-      "id": 14,
-      "name": "Flannel suit blazer",
-      "image": "https://user-images.githubusercontent.com/101625055/207602630-c99b70f9-68ea-41dd-a09c-fa24bc64b421.jpg",
-      "price": 4779
-    },
+    { "id": 14, "name": "Flannel suit blazer", "image": "Male", "price": 4779 },
     {
       "id": 15,
       "name": "Flannel suit trousers",

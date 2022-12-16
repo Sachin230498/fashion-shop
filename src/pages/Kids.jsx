@@ -3,21 +3,21 @@ import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../components/ProductCard";
-import { getCollectionsAPI } from "../redux/collections/collection.actions";
+import { getKidsAPI } from "../redux/kids/kids.actions";
 import Navbar from "../Routes/Navbar";
-const Collections = () => {
-  const collectdata = useSelector((store) => store.collection.collections);
+const Kids = () => {
+  const kidData = useSelector((store) => store.kids.kids);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getCollectionsAPI());
+    dispatch(getKidsAPI());
   }, []);
   return (
     <Box w="90%" margin="auto" justifyContent="center" alignItems="center">
       <Navbar />
       <Spacer />
       <br />
-      <Box
+      {/* <Box
         justifyContent="center"
         gap="6"
         mx="auto"
@@ -31,9 +31,9 @@ const Collections = () => {
         <div>TOPS|SWEATERS</div>
         <div>TROUSERS</div>
         <div>SHOES</div>
-      </Box>
+      </Box> */}
       <SimpleGrid columns={{ sm: 2, md: 3, xl: 4 }} spacing={10}>
-        {collectdata.map((post) => (
+        {kidData.map((post) => (
           <ProductCard
             key={post.id}
             name={post.name}
@@ -45,4 +45,4 @@ const Collections = () => {
     </Box>
   );
 };
-export default Collections;
+export default Kids;

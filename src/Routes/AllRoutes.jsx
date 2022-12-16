@@ -1,7 +1,9 @@
-import React from "react"
-import { Route, Routes } from "react-router-dom"
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 //import { Search } from "./Search"
-import { Home } from "./Home"
+import { Home } from "./Home";
+import Collections from "../pages/Collections";
+import Kids from "../pages/Kids";
 // import { Account } from "./Account"
 // import { Cart } from "./Cart"
 // import { Checkout } from "./Checkout"
@@ -12,10 +14,12 @@ import { Home } from "./Home"
 // import { Signup } from "./Signup"
 // import { Women } from "./Women"
 
-export const AllRoutes=()=>{
-return  <Routes>
-    <Route path="/"  element={<Home/>}/>
-
-    {/* <Route path="/search"  element={<Search/>}/> */}
-</Routes>
-}
+export const AllRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/kids" element={<Kids />} />
+      <Route path="/collections" element={<Collections />} />
+    </Routes>
+  );
+};
