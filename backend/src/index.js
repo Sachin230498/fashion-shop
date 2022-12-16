@@ -12,11 +12,11 @@ const {Server}=require("socket.io")
 const Redis = require('ioredis');
 const fs = require('fs');
 
-const redis = new Redis({
-    host: 'redis-12521.c246.us-east-1-4.ec2.cloud.redislabs.com',
-    port: 12521,
-    password: 'T4c2Hc8aDhemxBf69YrM5trlissMYgCS'
-});
+// const redis = new Redis({
+//     host: 'redis-12521.c246.us-east-1-4.ec2.cloud.redislabs.com',
+//     port: 12521,
+//     password: 'T4c2Hc8aDhemxBf69YrM5trlissMYgCS'
+// });
 
 
 
@@ -26,7 +26,7 @@ const io=new Server(httpServer)
 app.use(cors())
 app.use(express.json())
 app.use((req,res,next)=>{
-req.redis=redis
+// req.redis=redis
 next()
 })
 app.use("/users",userRoute)

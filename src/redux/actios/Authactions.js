@@ -5,11 +5,11 @@ export const login=(creads)=>async (dispatch)=>{
     dispatch({type:LODING})
     try{
         let tokken =await axios.post("http://localhost:8080/users/login",{...creads})
-        localStorage.setItem("access_token",tokken.data.token)
-        axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('access_token')}`
+        // localStorage.setItem("access_token",tokken.data.token)
+        // axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('access_token')}`
         creads.toast({
             title: "Login Successful",
-            description: `welcome ! thanks for joing ABlogs`,
+            description: `welcome ! thanks for joing Zara`,
             status: "success",
             duration: 5000,
             isClosable: true,

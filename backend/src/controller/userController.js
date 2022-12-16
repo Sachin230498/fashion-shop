@@ -33,13 +33,14 @@ const userSignup=(async (req,res)=>{
 // -------------------------------------------------------------------------------------------------------
 const userLogin=(async(req,res)=>{
     let {email,password}=req.body
+        console.log(email)
     try{
-        let data=await req.redis.get(email)
-        data=JSON.parse(data)
-       if(data){
-        return res.send({message:"login sucessfull",...data})
+    //     let data=await req.redis.get(email)
+    //     data=JSON.parse(data)
+    //    if(data){
+    //     return res.send({message:"login sucessfull",...data})
         
-       }
+    //    }
         let user=await User.findOne({email})
 
         if(user){
@@ -47,8 +48,8 @@ const userLogin=(async(req,res)=>{
         if(varifieduser){
             let token=jwt.sign({id:user._id,email:user.email,role:user.role},process.env.TokenSecret,{expiresIn:"7 days"})
             let refresh=jwt.sign({id:user._id,email:user.email,role:user.role},process.env.RefreshSecret)
-            let redisdata={token,refresh}
-          req.redis.set(email,JSON.stringify(redisdata),"EX",30)
+            // let redisdata={token,refresh}
+        //   req.redis.set(email,JSON.stringify(redisdata),"EX",30)
           console.log("mongo")
            
         return res.send({message:"login sucessfull",token,refresh})
