@@ -1,5 +1,5 @@
-import { login } from '../Redux/Auth/action'
-// import LogIn from '../Routes/LogIn'
+// import { login } from '../Redux/Auth/action'
+import LogIn from '../Routes/LogIn'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 // import Help from '../Components/Help'
@@ -22,7 +22,7 @@ const AllRoutes = () => {
       {/* <Route path='/product/:id' element={<SinglePage />}></Route> */}
       {/* <Route path='/help' element={<Help />}></Route> */}
       <Route path='/company' element={<Companylogin/>}></Route>
-      <Route path='/login' element={<logIn />} />
+      <Route path='/login' element={<LogIn />} />
       <Route path='/signin' element={<SignIn />} />
       {/* <Route path='/cart' element={<ProtectedRoute><Cart /></ProtectedRoute>}></Route> */}
       {/* <Route path='/checkout' element={<ProtectedRoute><Checkout /></ProtectedRoute>}></Route> */}

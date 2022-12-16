@@ -67,7 +67,7 @@ const LogIn = () => {
           <div className='Login_second_box2'>
 
             <h2>REGISTER</h2>
-            <p>IF YOU STILL DON'T HAVE A <span><b>CCG Collection</b></span> ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.</p>
+            <p>IF YOU STILL DON'T HAVE A <span><b>ZARA.COM</b></span> ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.</p>
             <p>BY GIVING US YOUR DETAILS, PURCHASING IN <b>ZARA.COM</b> WILL BE FASTER AND AN ENJOYABLE EXPERIENCE.</p>
             <button onClick={() => {
               navigate("/signin")
@@ -98,6 +98,7 @@ const Container = styled.div`
 }
 @media only screen and (max-width: 320px){
       display:block;
+}
 `
 
 export default LogIn;
