@@ -66,16 +66,19 @@ position: relative;
   z-index: 99;
   cursor: pointer;
   background-color: transparent;
-  color:white
+  color:black
+}
+.btn-slide.active{
+  background: white;
 }
 .prev {
   top: 50%;
-  left: 10px;
+  left: 15px;
  
 }
 .next {
   top: 50%;
-  right:10px;
+  right:15px;
 }
 .container-dots {
   position: fixed;
@@ -86,8 +89,8 @@ position: relative;
   /* display: flex; */
 }
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: 2px solid #f1f1f1;
   margin: 5px;
@@ -102,7 +105,7 @@ position: relative;
   bottom: 30px;
   right:34%;
   width: 40%;
-  /* transform: translate(-50%); */
+  transform: translate(-50%); 
   display: flex;
   justify-content: space-evenly;
 }
@@ -151,6 +154,8 @@ border-radius: 0px !important;
 .cartCounter{
   position: fixed;
   transform: translate(-50%, -30%);
+  border: 1px solid;
+  width: 15px;
 }
 
 .search{

@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 //import { Search } from "./Search"
 import { Home } from "./Home";
-import Collections from "../pages/Collections";
+import Collections from "../pages/collections";
 import Kids from "../pages/Kids";
 // import { Account } from "./Account"
 // import { Cart } from "./Cart"

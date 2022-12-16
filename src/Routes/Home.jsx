@@ -18,9 +18,10 @@ import React, { useContext, useEffect, useState } from "react";
 //import { Flex, Spacer } from '@chakra-ui/react'
 import "../CSS/Home.css";
 import { Link } from "react-scroll";
+import "../CSS/Home.css";
 import { Link as RouterLink } from "react-router-dom";
 // import BtnSlider from "../Components/BtnSlider";
-import BtnSlider from "../components/BtnSlider";
+import BtnSlider from "../Components/BtnSlider";
 import {
   datadotContainer,
   dataSlider,
@@ -177,6 +178,7 @@ export const Home = () => {
                 <RouterLink to="/search">
                   <Image w="100vw" h="100vh" src={obj.title} />
                   <video className="vedio" autoPlay loop muted>
+                    
                     <source
                       src={process.env.PUBLIC_URL + obj.title}
                       type="video/mp4"

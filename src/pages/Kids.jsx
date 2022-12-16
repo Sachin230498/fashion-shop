@@ -2,7 +2,7 @@ import { Box, SimpleGrid } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import ProductCard1 from "../components/ProductCard1";
+import ProductCard1 from "../Components/ProductCard1";
 import { getKidsAPI } from "../redux/kids/kids.actions";
 import Navbar from "../Routes/Navbar";
 const Kids = () => {
