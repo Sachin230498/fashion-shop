@@ -5,10 +5,16 @@ const ProductCard = ({ name, image, price }) => {
   return (
     <div>
       <Box justifyContent="center" w="350px">
-        <Image boxSize="300px" display="block" marginLeft="25px" src={image} alt={image} />
+        <Image
+          boxSize="300px"
+          display="block"
+          marginLeft="25px"
+          src={image}
+          alt={image}
+        />
         <AddIcon />
         <Text>{name}</Text>
-        <Text>{price}</Text>
+        <Text>₹ {price}</Text>
       </Box>
     </div>
   );
