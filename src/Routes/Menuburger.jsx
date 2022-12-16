@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import  "../CSS/Home.css"
+import "../CSS/Home.css";
 let Men = [
   "NEW",
   "ZARA ATHLETICZ",
@@ -58,34 +58,43 @@ let Child = [
   "ACCESSORIES",
   "JOIN LIFE",
 ];
-let men="men";
-let women="women";
-let child="child";
+let men = "men";
+let women = "women";
+let child = "child";
 
 function Dbody() {
   const [nam, setName] = useState(Women);
-  const [link,setLink] = useState("women");
-console.log(link)
+  const [link, setLink] = useState("women");
+  console.log(link);
   return (
     <Box className="scrolldetails">
       <Flex gap={6}>
-        <Box style={{ cursor: "pointer" }} onClick={() => {
-          setName(Women)
-            setLink(women)
-          }}>
+        <Box
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setName(Women);
+            setLink(women);
+          }}
+        >
           Women
         </Box>
-        <Box style={{ cursor: "pointer" }} onClick={() => {
-          setName(Men)
-          setLink(men)
-          }}>
+        <Box
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setName(Men);
+            setLink(men);
+          }}
+        >
           Men
         </Box>
 
-        <Box style={{ cursor: "pointer" }} onClick={() => {
-          setName(Child)
-          setLink(child)
-          }}>
+        <Box
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            setName(Child);
+            setLink(child);
+          }}
+        >
           Child
         </Box>
       </Flex>
