@@ -9,7 +9,7 @@ const ProductCard1 = ({ name, image, price }) => {
           width="250px"
           height="380px"
           display="block"
-          marginLeft="25px"
+          marginLeft="50px"
           src={image}
           alt={image}
         />

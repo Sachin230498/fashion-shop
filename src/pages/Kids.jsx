@@ -1,6 +1,6 @@
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-
+import { Select } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard1 from "../components/ProductCard1";
 import { getKidsAPI } from "../redux/kids/kids.actions";
@@ -21,6 +21,18 @@ const Kids = () => {
       bg="white"
     >
       <Navbar />
+      <br />
+      <Box
+        w="100px"
+        marginTop="100px"
+        justifyContent="left"
+        marginLeft="1000px"
+      >
+        <Select placeholder="Sortby">
+          <option value="lowtohigh">Low to high</option>
+          <option value="hightolow">High to low</option>
+        </Select>
+      </Box>
       <br />
       <SimpleGrid columns={{ sm: 2, md: 3, xl: 4 }} spacing={4}>
         {kidData.map((post) => (
