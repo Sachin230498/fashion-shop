@@ -15,21 +15,18 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React, { useContext, useEffect, useState } from "react";
-//import { Flex, Spacer } from '@chakra-ui/react'
 import "../CSS/Home.css";
 import { Link } from "react-scroll";
 import "../CSS/Home.css";
 import { Link as RouterLink } from "react-router-dom";
-// import BtnSlider from "../Components/BtnSlider";
-import BtnSlider from "../Components/BtnSlider";
+
+import BtnSlider from "../components/BtnSlider";
 import {
   datadotContainer,
   dataSlider,
   dataSliderFooter,
   imageSlider,
 } from "../Data/data";
-//import { HamburgerIcon } from '@chakra-ui/icons';
-//import { AuthContext } from '../Context/AuthContext';
 import Navbar from "./Navbar";
 
 export const Home = () => {
@@ -47,7 +44,7 @@ export const Home = () => {
       // console.log(scrollCheck)
       if (scrollCheck < 300) {
         setactive("dots1");
-        setColor("white");
+        setColor("black");
       }
       if (scrollCheck > 300) {
         setactive("dots2");

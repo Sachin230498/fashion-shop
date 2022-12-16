@@ -4,6 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import { Home } from "./Home";
 import Collections from "../pages/collections";
 import Kids from "../pages/Kids";
+import Mens from "../pages/mens";
+import Womens from "../pages/womens";
+import Sidebar from "../components/Sidebar";
 // import { Account } from "./Account"
 // import { Cart } from "./Cart"
 // import { Checkout } from "./Checkout"
@@ -20,6 +23,9 @@ export const AllRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/kids" element={<Kids />} />
       <Route path="/collections" element={<Collections />} />
+      <Route path="/mens" element={<Mens />} />
+      <Route path="/womens" element={<Womens />} />
+      <Route path="/sidebar" element={<Sidebar />} />
     </Routes>
   );
 };

@@ -243,6 +243,202 @@
       "price": 3196
     }
   ],
+  "mens": [
+    {
+      "id": 1,
+      "name": "FAUX SUEDE JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120191-b7e2fd20-0791-445a-b102-8668644e43e6.jpg",
+      "price": 5490
+    },
+    {
+      "id": 2,
+      "name": "BOMBER JACKET WITH CONTRAST PATCHES",
+      "image": "https://user-images.githubusercontent.com/101625055/208120209-a226669c-1ed2-4469-af85-1d2574036406.jpg",
+      "price": 3080
+    },
+    {
+      "id": 3,
+      "name": "BASIC BOMBER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120228-18669434-e544-4ea4-b4a4-d74b1f1801bc.jpg",
+      "price": 3052
+    },
+    {
+      "id": 4,
+      "name": "COMFORT COAT",
+      "image": "https://user-images.githubusercontent.com/101625055/208120244-795d526a-d0fc-4538-9316-f650fb742dbc.jpg",
+      "price": 3517
+    },
+    {
+      "id": 5,
+      "name": "BOMBER JACKET WITH CONTRAST PATCHES",
+      "image": "https://user-images.githubusercontent.com/101625055/208120269-2ed8ba5c-89d2-4d74-9877-18df62e7c8d8.jpg",
+      "price": 4728
+    },
+    {
+      "id": 6,
+      "name": "CONTRAST BOMBER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120303-b6d598c4-9add-46ea-ab0f-1f6565c1b11f.jpg",
+      "price": 4540
+    },
+    {
+      "id": 7,
+      "name": "BASIC BOMBER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120322-ed9d8cc0-813e-46e8-b37b-e780e99a86ae.jpg",
+      "price": 3009
+    },
+    {
+      "id": 8,
+      "name": "PUFFER TECHNICAL JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120339-856d2cef-ad9c-42d9-a65b-ad4bd1569dbe.jpg",
+      "price": 4934
+    },
+    {
+      "id": 9,
+      "name": "EMBROIDERED BOMBER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120366-b370fa7b-41f0-407d-8e6a-253507822b6f.jpg",
+      "price": 4215
+    },
+    {
+      "id": 10,
+      "name": "BOMBER JACKET WITH PATCHES",
+      "image": "https://user-images.githubusercontent.com/101625055/208120380-97e5634a-b490-45cf-aa92-ed34a73f39ec.jpg",
+      "price": 1962
+    },
+    {
+      "id": 11,
+      "name": "FAUX LEATHER BIKER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120399-46ee2b09-09c9-4721-b036-9058329a989c.jpg",
+      "price": 3536
+    },
+    {
+      "id": 12,
+      "name": "DOUBLE-FACED JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120422-12781d71-5ba7-4da2-9ef8-422fa569e1e1.jpg",
+      "price": 2819
+    },
+    {
+      "id": 13,
+      "name": "FLORAL JACQUARD JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120452-decf2dbe-87c1-4dca-8d03-921c046c66f1.jpg",
+      "price": 4013
+    },
+    {
+      "id": 14,
+      "name": "FAUX LEATHER BOMBER JACKET",
+      "image": "https://user-images.githubusercontent.com/101625055/208120472-5bf0c5cd-32ab-4838-910d-35a4875ca0cb.jpg",
+      "price": 4779
+    },
+    {
+      "id": 15,
+      "name": "MULTICOLOURED RUNNING SNEAKERS",
+      "image": "https://user-images.githubusercontent.com/101625055/208120493-11522989-e5a5-41b4-89dd-d7cf83c66dd6.jpg",
+      "price": 3593
+    },
+    {
+      "id": 16,
+      "name": "CHELSEA ANKLE BOOTS",
+      "image": "https://user-images.githubusercontent.com/101625055/208120513-bafb4fc3-152f-4a20-b035-6bd30c7262f9.jpg",
+      "price": 4899
+    }
+  ],
+  "womens": [
+    {
+      "id": 1,
+      "name": "WIDE WAISTBAND LEGGINGS",
+      "image": "https://user-images.githubusercontent.com/101625055/208124455-4ffd1365-6d26-4a40-8126-6de4cc604efd.jpg",
+      "price": 5490
+    },
+    {
+      "id": 2,
+      "name": "ZW 90S WIDE-LEG FAUX LE",
+      "image": "https://user-images.githubusercontent.com/101625055/208124502-8c752d6a-234f-4632-b8d8-6214b35b8edb.jpg",
+      "price": 3080
+    },
+    {
+      "id": 3,
+      "name": "WOOL BLEND COAT WITH",
+      "image": "https://user-images.githubusercontent.com/101625055/208124532-62cfd3e6-d589-481e-86c7-7f39b827e9e9.jpg",
+      "price": 3052
+    },
+    {
+      "id": 4,
+      "name": "FULL LENGTH TROUSERS",
+      "image": "https://user-images.githubusercontent.com/101625055/208124551-7a325e92-56da-4a9c-9139-b00bb2f94974.jpg",
+      "price": 3517
+    },
+    {
+      "id": 5,
+      "name": "MIDI DRESS",
+      "image": "https://user-images.githubusercontent.com/101625055/208124572-6756366c-249e-4260-ba08-d539cb8e05c1.jpg",
+      "price": 4728
+    },
+    {
+      "id": 6,
+      "name": "HEELED NYLON ANKLE BOOTS",
+      "image": "https://user-images.githubusercontent.com/101625055/208124597-d8fb673d-abd6-48ed-85a2-3ebe9ae0e9c5.jpg",
+      "price": 4540
+    },
+    {
+      "id": 7,
+      "name": "CULOTTE TROUSERS",
+      "image": "https://user-images.githubusercontent.com/101625055/208124617-f48fc916-51ec-47d4-8c1c-b38db1b4e84c.jpg",
+      "price": 3009
+    },
+    {
+      "id": 8,
+      "name": "SEAMLESS TOP",
+      "image": "https://user-images.githubusercontent.com/101625055/208124640-e12f0d0a-1723-4af5-acea-3a998a2cbac4.jpg",
+      "price": 4934
+    },
+    {
+      "id": 9,
+      "name": "STRIPED OVERSIZE SHIRT",
+      "image": "https://user-images.githubusercontent.com/101625055/208124666-dce6d825-5b23-4204-88d5-5ce38dac1b81.jpg",
+      "price": 4215
+    },
+    {
+      "id": 10,
+      "name": "WOOL BLEND FITTED ",
+      "image": "https://user-images.githubusercontent.com/101625055/208124683-54f410e2-f670-4422-9084-ec873bf9e5dd.jpg",
+      "price": 1962
+    },
+    {
+      "id": 11,
+      "name": "TROUSERS WITH LIN",
+      "image": "https://user-images.githubusercontent.com/101625055/208124710-acc058bf-8508-4c97-ba38-4121fcaa9574.jpg",
+      "price": 3536
+    },
+    {
+      "id": 12,
+      "name": "BOOTCUT LEGGINGS",
+      "image": "https://user-images.githubusercontent.com/101625055/208124724-1f445199-abfd-4d76-9f8a-292cff49429f.jpg",
+      "price": 2819
+    },
+    {
+      "id": 13,
+      "name": "CULOTTE TROUSERS",
+      "image": "https://user-images.githubusercontent.com/101625055/208124743-0e482e52-db03-4b1a-9489-6fa1204ff92a.jpg",
+      "price": 4013
+    },
+    {
+      "id": 14,
+      "name": "SATIN DRESS WITH EMBROI",
+      "image": "https://user-images.githubusercontent.com/101625055/208124758-b1126818-04a0-4543-b777-69372c3c56b5.jpg",
+      "price": 4779
+    },
+    {
+      "id": 15,
+      "name": "EMBROIDERED SHIRT WITH ",
+      "image": "https://user-images.githubusercontent.com/101625055/208124778-23a8dd20-6310-40f9-bd6d-d65d775eb19e.jpg",
+      "price": 3593
+    },
+    {
+      "id": 16,
+      "name": "FAUX LEATHER DRESS WITH TOPSTITCHING",
+      "image": "https://user-images.githubusercontent.com/101625055/208124797-ce1bb9c4-d1af-472b-b7f8-c211d1152d0e.jpg",
+      "price": 4899
+    }
+  ],
   "random": [
     {
       "id": 1,
