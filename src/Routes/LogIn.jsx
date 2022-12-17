@@ -1,103 +1,75 @@
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
+//  import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import "../CSS/Login.css"
-import { useState } from 'react';
-import { initializeApp } from "firebase/app";
-import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../redux/Auth/action'
-import Footer from '../Components/Footer';
-import styled from 'styled-components';
-const LogIn = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch()
-  const location = useLocation()
-  const { isAuth } = useSelector((store) => (store.AuthReducer))
-  console.log(location)
-  const path = location.state?.path;
-  const [data, setData] = useState({
-    email: '',
-    password: ''
-  })
+import React, { useContext, useState } from "react"
+import { Box, Button, ButtonGroup, Drawer, DrawerBody, DrawerCloseButton, DrawerContent , DrawerHeader, DrawerOverlay, Heading, Icon,Input,InputGroup,InputRightElement,Stack,StackDivider, Text, useDisclosure, VStack } from '@chakra-ui/react'
+import { Flex, Spacer } from '@chakra-ui/react'
+ import Footer from "../Components/Footer"
+import { Link as RouterLink, useNavigate  } from "react-router-dom";
+import { HamburgerIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { AuthContext } from "../Context/AuthContext";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyDCHvdgABXgjtj6C3-55D2colSpVF05NTI",
-    authDomain: "zara-project-adec4.firebaseapp.com",
-    projectId: "zara-project-adec4",
-    storageBucket: "zara-project-adec4.appspot.com",
-    messagingSenderId: "1083442232261",
-    appId: "1:1083442232261:web:24d99e9bc4f6e92e49e9ac",
-    measurementId: "G-JLT9HVM9BX"
-  };
 
-  const app = initializeApp(firebaseConfig);
-  const handleLogin = (e) => {
-    e.preventDefault();
-    if (data.email && data.password) {
-      dispatch(login(data.email, data.password)).then((res) => {
-        if(!res){
-          alert("You have entered wrong credentials or please Signup first")
-        }else{
-          navigate(path)
-        } 
-      })
-    }else{
-      alert("You Have entered Wrong Credentials")
+export const Login=()=>{
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
+    const [show, setShow] = React.useState(false)
+    const {state,dispatch}=useContext(AuthContext)
+    const [email,setEmail]=useState("")
+    const [password,setPassword]=useState("")
+    const Navigate=useNavigate()
+    const handleClick = () => setShow(!show)
+    const handleLogin=(event)=>{
+      event.preventDefault();
+      if(state.email===email && state.password===password){
+        dispatch({
+          type:"logIn"
+        })
+        Navigate("/")
+      }
     }
-  }
+    return <>
+   <Flex className='navbarAll' w='100%' pt='10px' gap={[0,2,2]} flexDir={["column","row","row"]}>
+    <Flex gap='2'>
+    <Box>
+     
+    </Box>
+   
+    </Flex>
+  <Spacer />
+   
+  </Flex>
 
-  if (isAuth) {
-    return <Navigate to={`/`} />
-  }
+<Box p={4} ml={{ base: "2em", md: "4em",lg:"6em" }} mt="30vh"display={{ md: 'flex',lg:'flex' }} >
 
-  return (
-    <>
-      <div className='navbar_space'></div>
-      <div className='Login_main_box'>
-        <div className='Login_second_box'>
-          <div className='Login_second_box1'>
-            <h2>LOG IN</h2>
-            <form action="">
-              <label htmlFor="">E-MAIL</label><br />
-
-              <input type="email" placeholder='Enter Email' onChange={(e) => setData({ ...data, email: e.target.value })} /><br /><br />
-              <label htmlFor="">PASSWORD</label><br />
-              <input type="password" placeholder='Enter Password' onChange={(e) => setData({ ...data, password: e.target.value })} /><br /><br />
-              <button onClick={handleLogin}>LOG IN</button>
-            </form>
-          </div>
-          <div className='Login_second_box2'>
-
-            <h2>REGISTER</h2>
-            <p>IF YOU STILL DON'T HAVE A <span><b>ZARA.COM</b></span> ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.</p>
-            <p>BY GIVING US YOUR DETAILS, PURCHASING IN <b>ZARA.COM</b> WILL BE FASTER AND AN ENJOYABLE EXPERIENCE.</p>
-            <button onClick={() => {
-              navigate("/signin")
-            }} >CREATE ACCOUNT</button>
-          </div>
-
-          <Container classname='signbox'>
-            <p >DONT HAVE AN ACCOUNT? <Link to={`/signin`}>REGISTER</Link></p>
-          </Container>
-          <div></div>
-        </div>
-      </div>
-      <Footer />
+<Box mr={{ md: '13rem',lg:'13rem' }}>
+<Heading size='lg' mb='1em'>Login</Heading>
+<form onSubmit={handleLogin}>
+<Input variant='flushed' onChange={(e)=>setEmail(e.target.value)} placeholder='E-MAIL' />
+<InputGroup size='md'>
+      <Input
+        pr='4.5rem'
+        type={show ? 'text' : 'password'}
+        placeholder='Enter password' onChange={(e)=>setPassword(e.target.value)}
+        variant='flushed'
+      />
+      <InputRightElement width='4.5rem'>
+        <Button h='1.75rem' size='sm' onClick={handleClick} variant='ghost'>
+          {show ? <Icon as={ViewOffIcon}/> : <Icon as={ViewIcon}/>}
+        </Button>
+      </InputRightElement>
+    </InputGroup>
+    <Input type='Submit' mt='1em' value="Login" bg="black" cursor='pointer' color='white' borderRadius='none'/>
+</form>
+</Box>
+<Box width={{ base: "60vw", md: "40vw",lg:"30vw" }} mt={{ base: 4, md: 0 }}>
+<Heading mb='1em' size='lg'>Register</Heading>
+<Stack spacing={3}>
+  <Text fontSize='xs'>IF YOU STILL DON'T HAVE A ZARA.COM ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.</Text>
+  <Text fontSize='xs'>BY GIVING US YOUR DETAILS, PURCHASING IN ZARA.COM WILL BE FASTER AND AN ENJOYABLE EXPERIENCE.</Text>
+</Stack>
+<RouterLink to="/SignIn"><Button size='md' mt="1em" width="50%" color='white' bg='black' borderRadius='none' >Create Account</Button></RouterLink>
+</Box>
+</Box>
+<Footer/>
     </>
-  )
 }
-
-const Container = styled.div`
-  display: none;
-@media only screen and (min-width: 769px) and (max-width:845px){
-      display:block;
-}
-@media only screen and (min-width: 481px) and (max-width:768px){
-      display:block;
-}
-@media only screen and (min-width:320px) and (max-width:480px){
-      display:block;
-}
-@media only screen and (max-width: 320px){
-      display:block;
-`
-
-export default LogIn;

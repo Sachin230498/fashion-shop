@@ -1,5 +1,6 @@
-import LogIn from "../Routes/LogIn";
-import { login } from "../redux/Auth/action";
+// import login from "../Routes/LogIn";
+import { Login } from "../Routes/LogIn";
+// import { login } from "../redux/Auth/action";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 //import { Search } from "./Search"
@@ -30,9 +31,9 @@ export const AllRoutes = () => {
       <Route path="/mens" element={<Mens />} />
       <Route path="/womens" element={<Womens />} />
       <Route path='/company' element={<Companylogin/>}></Route>
-      <Route path='/login' element={<LogIn />} />
+      <Route path='/LogIn' element={<Login />} />
       <Route path="/sidebar" element={<Sidebar />} />
-      <Route path="/LogIn" element={<LogIn />} />
+      {/* <Route path="/LogIn" element={<LogIn />} /> */}
       <Route path="/SignIn" element={<SignIn />} />
     </Routes>
   );
