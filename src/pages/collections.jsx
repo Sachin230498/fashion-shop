@@ -2,7 +2,7 @@ import { Box, SimpleGrid, Spacer } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../Components/ProductCard";
 import { getCollectionsAPI } from "../redux/collections/collection.actions";
 import Navbar from "../Routes/Navbar";
 const Collections = () => {
