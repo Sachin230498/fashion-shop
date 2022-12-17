@@ -1,3 +1,5 @@
+import LogIn from "../Routes/LogIn";
+import { login } from "../redux/Auth/action";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 //import { Search } from "./Search"
@@ -7,12 +9,12 @@ import Kids from "../pages/Kids";
 import Mens from "../pages/mens";
 import Womens from "../pages/womens";
 import Sidebar from "../Components/Sidebar";
+import Companylogin from "./Company";
 // import { Account } from "./Account"
 // import { Cart } from "./Cart"
 // import { Checkout } from "./Checkout"
 // import { Kids } from "./Kids"
-  import  LogIn  from "./LogIn"
- import { login } from "../redux/Auth/action";
+   
  import SignIn from "./SignIn";
 // import { Men } from "./Men"
 // import { ProductsDetail } from "./ProductsDetail"
@@ -27,6 +29,8 @@ export const AllRoutes = () => {
       <Route path="/Collections" element={<Collections />} />
       <Route path="/mens" element={<Mens />} />
       <Route path="/womens" element={<Womens />} />
+      <Route path='/company' element={<Companylogin/>}></Route>
+      <Route path='/login' element={<LogIn />} />
       <Route path="/sidebar" element={<Sidebar />} />
       <Route path="/LogIn" element={<LogIn />} />
       <Route path="/SignIn" element={<SignIn />} />

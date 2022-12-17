@@ -1,7 +1,7 @@
 import React from 'react'
 import { getAuth, signOut } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import * as types from "../Redux/Auth/actionTypes";
+import * as types from "../redux/Auth/actionTypes";
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 const Signout = () => {
@@ -31,4 +31,4 @@ const Signout = () => {
     )
 }
 
-export default Signout;     
+export default Signout

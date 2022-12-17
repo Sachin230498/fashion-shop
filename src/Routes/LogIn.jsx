@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { initializeApp } from "firebase/app";
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../redux/Auth/action'
-import Navbar from './Navbar';
-// import Footer from '../Components/Footer';
+import Footer from '../Components/Footer';
 import styled from 'styled-components';
 const LogIn = () => {
   const navigate = useNavigate();
@@ -46,12 +45,11 @@ const LogIn = () => {
   }
 
   if (isAuth) {
-    return <Navigate to={`/login`} />
+    return <Navigate to={`/`} />
   }
 
   return (
     <>
-    <Navbar/>
       <div className='navbar_space'></div>
       <div className='Login_main_box'>
         <div className='Login_second_box'>
@@ -82,7 +80,7 @@ const LogIn = () => {
           <div></div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
@@ -100,7 +98,6 @@ const Container = styled.div`
 }
 @media only screen and (max-width: 320px){
       display:block;
-}
 `
 
 export default LogIn;

@@ -158,7 +158,7 @@ const Navbar = () => {
               color={color}
               variant="link"
             >
-              {state.isAuth ? state.user : "Register"}
+              {state.isAuth ? state.user : "LogIn"}
             </Button>
           </RouterLink>
 
