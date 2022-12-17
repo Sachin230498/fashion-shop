@@ -1,3 +1,6 @@
+// import login from "../Routes/LogIn";
+import { Login } from "../Routes/LogIn";
+// import { login } from "../redux/Auth/action";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 //import { Search } from "./Search"
@@ -6,14 +9,18 @@ import Collections from "../pages/collections";
 import Kids from "../pages/Kids";
 import Mens from "../pages/mens";
 import Womens from "../pages/womens";
+
 // import Sidebar from "../components/Sidebar";
 import SingleK from "../pages/SingleK";
+
+import Sidebar from "../components/Sidebar";
+import Companylogin from "./Company";
+
 // import { Account } from "./Account"
 // import { Cart } from "./Cart"
 // import { Checkout } from "./Checkout"
 // import { Kids } from "./Kids"
-  import  LogIn  from "./LogIn"
- import { login } from "../redux/Auth/action";
+   
  import SignIn from "./SignIn";
 import SingleW from "../pages/SingleW";
 import SingleC from "../pages/SingleC";
@@ -38,10 +45,17 @@ export const AllRoutes = () => {
       <Route path="/mens/:id" element={<SingleM/>}/>
       {/* <Route path="/mens/:id" element={<Mens />} /> */}
       <Route path="/womens" element={<Womens />} />
+
       <Route path="/womens/:id" element={<SingleW/>}/>
       {/* <Route path="/womens/:id" element={<Womens />} /> */}
       {/* <Route path="/sidebar" element={<Sidebar />} /> */}
-      <Route path="/LogIn" element={<LogIn />} />
+
+
+      <Route path='/company' element={<Companylogin/>}></Route>
+      <Route path='/LogIn' element={<Login />} />
+      <Route path="/sidebar" element={<Sidebar />} />
+      {/* <Route path="/LogIn" element={<LogIn />} /> */}
+
       <Route path="/SignIn" element={<SignIn />} />
     </Routes>
   );
