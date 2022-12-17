@@ -21,7 +21,7 @@ import { Flex, Spacer } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 import Dbody from "./Menuburger";
-import Sidebar from "../Components/Sidebar";
+import Sidebar from "../components/Sidebar";
 import Gen from "../media/GenChoice.jpeg";
 import LogIn from "./LogIn";
 import { login } from "../redux/Auth/action";
