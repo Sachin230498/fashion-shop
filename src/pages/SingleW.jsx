@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Kids from "./Kids"
+import Womens from "./womens";
 import { Select, Box, Button, Flex, Grid, GridItem, Image, Text} from "@chakra-ui/react";
 // const getData = (url) => {
 //   return fetch(url).then((res) => res.json());
 // };
 const getDataid = (id) => {
-  return fetch(`http://localhost:8080/kids/${id}`).then((res) => res.json());
+  return fetch(`http://localhost:8080/womens/${id}`).then((res) => res.json());
 };
-const SingleK = () => {
+const SingleW = () => {
   const { id } = useParams();
-  const [kidDetails, setKidDetails] = useState({});
+  const [womDetails, setWomDetails] = useState({});
 
   useEffect(() => {
     // getData(`http://localhost:8080/kids/${id}`).then((res) =>
@@ -18,7 +19,7 @@ const SingleK = () => {
     // );
     getDataid(id)
       .then((res) => {
-        setKidDetails(res);
+        setWomDetails(res);
         console.log(res);
       })
       .catch((err) => {
@@ -26,7 +27,7 @@ const SingleK = () => {
       });
   }, [id]);
 
-  console.log(kidDetails);
+  console.log(womDetails);
   return (
     <Box justifyContent="center" w="1000px">
       <Flex>
@@ -81,11 +82,11 @@ const SingleK = () => {
         </Box>
         </Box>
         <Box w="7900px" ml="12" mt="20">
-          <img src={kidDetails.image} alt="prof-pic" />
+          <img src={womDetails.image} alt="prof-pic" />
         </Box>
         <Box w="900px" mt="20" mr="-20">
-          <p>Name : {kidDetails.name}</p>
-          <p>Price : {kidDetails.price}</p>
+          <p>Name : {womDetails.name}</p>
+          <p>Price : {womDetails.price}</p>
           <Text fontSize="xs" color='gray.500' mb={7}>MRP incl. of all taxes</Text>
           <Box h='1px' bg='gray.200' mt='4' mb={2}></Box>
                                         <Text fontSize="xs" >This product has a larger fit than usual.</Text>
@@ -106,16 +107,16 @@ const SingleK = () => {
             ADD TO CART
           </Button>
           <br />
-          <Link to="/kids">GO BACK</Link>
+          <Link to="/womens">GO BACK</Link>
           <Text fontSize="xs" mt='10' mb='2'>CHECK IN-STORE AVAILABILITY</Text>
           <Text fontSize="xs" my='2'>DELIVERY, EXCHANGES AND RETURNS</Text>
         </Box>
         
       </Flex>
 
-      <Kids></Kids>
+      <Womens></Womens>
     </Box>
   );
 };
 
-export default SingleK;
+export default SingleW;
