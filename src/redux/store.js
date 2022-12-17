@@ -1,8 +1,19 @@
-import {legacy_createStore,combineReducers,applyMiddleware} from "redux"
-import thunk from "redux-thunk"
-import {Authreducer} from "./reducer/Authreducer"
-let rootreducer =combineReducers({
-    auth:Authreducer,
-})
+import {
+  legacy_createStore as createStore,
+  applyMiddleware,
+  compose,
+  combineReducers,
+} from "redux";
+import thunk from "redux-thunk";
+import { productReducer } from "./products/reducer";
 
-export const store =legacy_createStore(rootreducer,applyMiddleware(thunk));
+const rootReducer = combineReducers({
+  productReducer,
+});
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+export const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);

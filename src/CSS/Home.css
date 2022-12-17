@@ -1,0 +1,231 @@
+body, html {
+   
+    scroll-snap-points-x: repeat(100vw);
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type:both mandatory;
+
+  }
+
+  *{
+    box-sizing: border-box !important;
+    font-family:"Times New Roman" !important;
+  }
+  .homeMain{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+  .border{
+    border:1px solid yellow;
+  }
+.container{
+    width:100vw;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    position: relative;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+scroll-snap-align: center;
+}
+section{
+display:flex;
+justify-content: center;
+align-items:center;
+width:100vw;
+height:100vh;
+margin:0px;
+scroll-snap-align: center;
+
+}
+/* .container::-webkit-scrollbar{
+  -webkit-appearance: none;
+} */
+
+.vedio{
+    width: 100%;
+    height: 100%;
+-o-object-fit: cover;
+object-fit: cover;
+position: relative;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+.active-anim {
+  opacity: 1;
+}
+.btn-slide {
+  width: 15%;
+  position: fixed;
+  z-index: 99;
+  cursor: pointer;
+  background-color: transparent;
+  color:white
+}
+.prev {
+  top: 50%;
+  left: 10px;
+ 
+}
+.next {
+  top: 50%;
+  right:10px;
+}
+.container-dots {
+  position: fixed;
+  bottom: 10%;
+  right: 4%;
+  z-index: 99;
+  /* transform: translate(-50%); */
+  /* display: flex; */
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #f1f1f1;
+  margin: 5px;
+  background: #f1f1f1;
+}
+.dot.active {
+  background: rgb(32, 32, 32);
+}
+.container-sliderFooter {
+  position: fixed;
+  z-index: 99;
+  bottom: 30px;
+  right:34%;
+  width: 40%;
+  /* transform: translate(-50%); */
+  display: flex;
+  justify-content: space-evenly;
+}
+.sliderFooter {
+  color:white;
+  cursor: pointer;
+}
+.sliderFooter.active {
+  color: rgb(32, 32, 32);
+}
+Link.active{
+  background-color: rgb(32, 32, 32);
+}
+.search{
+/* border-bottom: 1px solid white; */
+width: 6em  ;
+height: auto !important;
+display: flex;
+border-radius: 0px !important;
+}
+.search:hover{
+  background:none !important;
+}
+/* css for navbar div */
+.navbtnbox {
+  align-items: flex-start !important;
+}
+.navbar{
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 99;
+  align-items: flex-start !important;
+}
+.change-my-color {
+  fill: white;
+}
+/* .filter{
+  margin-left: 100px;
+  position:fixed !important;
+  top:10vh;
+  right: 1.5em;
+  z-index: 100;
+} */
+
+.cartCounter{
+  position: fixed;
+  transform: translate(-50%, -30%);
+}
+
+.search{
+    /* border-bottom: 1px solid white; */
+    width: 6em  ;
+    height: auto !important;
+    display: flex;
+    margin-right: 3em !important;
+    border-radius: 0px !important;
+    }
+    .search:hover{
+      background:none !important;
+    }
+    /* css for navbar div */
+    .navbtnbox {
+      align-items: flex-start !important;
+    }
+    .navbar{
+      position: fixed;
+      z-index: 99;
+      align-items: flex-start !important;
+    }
+    .navbarAll{
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 99;
+        align-items: flex-start !important;
+        /* background-color: white; */
+    }
+    .change-my-color {
+      fill: white;
+    }
+    /* .filter{
+      margin-left: ;
+      position:fixed;
+      top:0;
+      right: 30px;
+      bottom: 0;
+      z-index: 9999;
+    } */
+
+    
+.scrolldetails ::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrolldetails ::-webkit-scrollbar-track {
+  background: grey;
+}
+
+/* Handle */
+.scrolldetails ::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Handle on hover */
+.scrolldetails ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.scrolldetails ::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrolldetails ::-webkit-scrollbar-track {
+  background: grey;
+}
+
+/* Handle */
+.scrolldetails ::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Handle on hover */
+.scrolldetails ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

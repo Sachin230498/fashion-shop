@@ -1,18 +1,12 @@
 import './App.css';
-import LoginSignup from './pages/LoginSignup';
-
-
-let val=process.env.BASEURL
-
-console.log(val)
+import { AllRoutes } from './Routes/AllRoutes';
 
 function App() {
-return(
-  <>
-  <LoginSignup/>
-  </>
-)
-  
+  return (
+    <div className="App">
+    <AllRoutes/>
+    </div>
+  );
 }
 
 export default App;

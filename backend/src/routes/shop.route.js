@@ -27,9 +27,9 @@ app.post("/:id/addproduct",Auth,async(req,res)=>{
     try{
         let product=await Product.create({seller,...req.body})
         let shopupadate=await Shop.updateOne({_id:shop},{$push:{products:product}})
-        return res.send(shopupadate)
+        return res.status(201).send(shopupadate)
     }catch(e){
-        res.send(e.message)
+        res.status(404).send(e.message)
     }
 
    
@@ -39,9 +39,14 @@ app.get("/myshop",Auth,async(req,res)=>{
     try{
 
         let relate=await Shop.findOne({seller:req.userId})
-        return res.send(relate)
+        if(relate){
+            return res.status(201).send(relate)
+        }else{
+            return res.status(401).send("shop is not there")
+        }
+        
     }catch(e){
-        res.send(e.message)
+        res.status(401).send(e.message)
     }
 })
 
