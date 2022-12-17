@@ -18,13 +18,49 @@ import {
 import React from "react";
 import Gen from "../media/GenChoice.jpeg";
 import { useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 export default function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const navigate = useNavigate();
+
+  const [color, setColor] = useState("black");
+  const [active, setactive] = useState("dots1");
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY;
+      // console.log(scrollCheck)
+      if (scrollCheck < 300) {
+        setactive("dots1");
+        setColor("black");
+      }
+      if (scrollCheck > 300) {
+        setactive("dots2");
+        setColor("aqua");
+      }
+      if (scrollCheck > 800) {
+        setactive("dots3");
+        setColor("White");
+      }
+      if (scrollCheck > 1289) {
+        setactive("dots4");
+        setColor("purple");
+      }
+      if (scrollCheck > 1689) {
+        setactive("dots4");
+        setColor("green");
+      }
+      if (scrollCheck > 1889) {
+        setactive("dots4");
+        setColor("black");
+      }
+    });
+  }, []);
+
   return (
     <>
-      <HamburgerIcon ref={btnRef} onClick={onOpen} color="white" />
+      <HamburgerIcon ref={btnRef} onClick={onOpen} color={color} />
       <Drawer
         isOpen={isOpen}
         placement="left"

@@ -1,5 +1,5 @@
 import { Box, SimpleGrid } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { Select } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard1 from "../components/ProductCard1";
@@ -9,16 +9,59 @@ const Mens = () => {
   const menData = useSelector((store) => store.mens.mens);
   const dispatch = useDispatch();
 
+  // const [color, setColor] = useState("white");
+  // const [active, setactive] = useState("dots1");
+
+  //  const { isOpen, onOpen, onClose } = useDisclosure()
+  // const btnRef = React.useRef()
+  //const {state}=useContext(AuthContext)
+
+  // useEffect(() => {
+  //   document.addEventListener("scroll", () => {
+  //     const scrollCheck = window.scrollY;
+  //     if (scrollCheck < 300) {
+  //       setactive("dots1");
+  //       setColor("while");
+  //     }
+  //     if (scrollCheck > 300) {
+  //       setactive("dots2");
+  //       setColor("aqua");
+  //     }
+  //     if (scrollCheck > 800) {
+  //       setactive("dots3");
+  //       setColor("White");
+  //     }
+  //     if (scrollCheck > 1389) {
+  //       setactive("dots4");
+  //       setColor("red");
+  //     }
+  //     if (scrollCheck > 1689) {
+  //       setactive("dots4");
+  //       setColor("green");
+  //     }
+  //     if (scrollCheck > 1900) {
+  //       setactive("dots4");
+  //       setColor("black");
+  //     }
+  //     if (scrollCheck > 2180) {
+  //       setactive("dots5");
+  //       setColor("yellow");
+  //     }
+  //   });
+  // }, []);
+   
   useEffect(() => {
     dispatch(getMensAPI());
   }, []);
   return (
+
     <Box
       w="90%"
       margin="auto"
       justifyContent="center"
       alignItems="center"
       bg="white"
+      paddingBottom="20px"
     >
       <Navbar />
       <br />

@@ -19,6 +19,7 @@ const Kids = () => {
       justifyContent="center"
       alignItems="center"
       bg="white"
+      paddingBottom="20px"
     >
       <Navbar />
       <br />

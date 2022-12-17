@@ -23,12 +23,13 @@ import { AuthContext } from "../Context/AuthContext";
 import Dbody from "./Menuburger";
 import Sidebar from "../components/Sidebar";
 import Gen from "../media/GenChoice.jpeg";
+import Search from "../Routes/Search"
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const { state } = useContext(AuthContext);
-  const [color, setColor] = useState("white");
+  const [color, setColor] = useState("black");
   const [active, setactive] = useState("dots1");
 
   useEffect(() => {
@@ -37,19 +38,31 @@ const Navbar = () => {
       // console.log(scrollCheck)
       if (scrollCheck < 300) {
         setactive("dots1");
-        setColor("white");
+        setColor("black");
       }
       if (scrollCheck > 300) {
         setactive("dots2");
-        setColor("Black");
+        setColor("aqua");
       }
-      if (scrollCheck > 900) {
+      if (scrollCheck > 800) {
         setactive("dots3");
         setColor("White");
       }
-      if (scrollCheck > 1789) {
+      if (scrollCheck > 1389) {
         setactive("dots4");
-        setColor("Black");
+        setColor("red");
+      }
+      if (scrollCheck > 1689) {
+        setactive("dots4");
+        setColor("green");
+      }
+      if (scrollCheck > 1889) {
+        setactive("dots4");
+        setColor("black");
+      }
+      if (scrollCheck > 1900) {
+        setactive("dots5");
+        setColor("black");
       }
     });
   }, []);
@@ -172,35 +185,22 @@ const Navbar = () => {
           </RouterLink>
 
           <RouterLink to="/cart">
-            <Button
-              className="navbarbtn"
-              position="relative"
-              color={color}
-              variant="link"
-            >
-              <Box as="span" fontSize="14px" className="cartCounter">
-                {state.cartCount}
+          <Button className='navbarbtn'
+             position="relative"  color={color} variant='link'>
+              <Box as="span"  fontSize="14px" 
+                className="cartCounter">
+                  {state.cartCount}
               </Box>
 
-              <svg style={{ fill: color, width: "2em", height: "2.2em" }}>
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M9 
-        5.001V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.001h5v7h-1v-6H5v13.
-        9h10v1H4V5h5zM10 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.001h-4V4z"
-                ></path>
-
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M22.8 23.4v-9h-5.
-      4v9l2.695-2.827L22.8 23.4zm-4.6-1.998l1.894-1.987L22 21.407V15.2h-3
-      .8v6.202z"
-                ></path>
-              </svg>
-            </Button>
+           <svg  style={{fill:color,width:'2em',height:"2.2em"}}>
+             
+               <path fillRule="evenodd" clipRule="evenodd" d="M9 5.001V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.001h5v7h-1v-6H5v13.9h10v1H4V5h5zM10 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.001h-4V4z"></path>
+               <path fillRule="evenodd" clipRule="evenodd" d="M22.8 23.4v-9h-5.4v9l2.695-2.827L22.8 23.4zm-4.6-1.998l1.894-1.987L22 21.407V15.2h-3.8v6.202z"></path>
+    
+          </svg>
+          </Button>
           </RouterLink>
+
         </ButtonGroup>
       </Flex>
     </div>
