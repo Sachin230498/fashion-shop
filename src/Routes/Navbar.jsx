@@ -21,8 +21,10 @@ import { Flex, Spacer } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 import Dbody from "./Menuburger";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../Components/Sidebar";
 import Gen from "../media/GenChoice.jpeg";
+import LogIn from "./LogIn";
+import { login } from "../redux/Auth/action";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -149,14 +151,14 @@ const Navbar = () => {
             </Button>
           </RouterLink>
 
-          <RouterLink to={state.isAuth ? "/account" : "/login"}>
+          <RouterLink to={state.isAuth ? "/login " : "/signin"}>
             <Button
               className="navbarbtn loginbtn"
               fontWeight="400"
               color={color}
               variant="link"
             >
-              {state.isAuth ? state.user : "Login"}
+              {state.isAuth ? state.user : "Register"}
             </Button>
           </RouterLink>
 

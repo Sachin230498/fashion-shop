@@ -12,7 +12,9 @@ import SingleK from "../pages/SingleK";
 // import { Cart } from "./Cart"
 // import { Checkout } from "./Checkout"
 // import { Kids } from "./Kids"
-// import { Login } from "./Login"
+  import  LogIn  from "./LogIn"
+ import { login } from "../redux/Auth/action";
+ import SignIn from "./SignIn";
 // import { Men } from "./Men"
 // import { ProductsDetail } from "./ProductsDetail"
 // import { Signup } from "./Signup"
@@ -26,11 +28,14 @@ export const AllRoutes = () => {
       <Route path="/kids/:id" element={<SingleK />} />
       <Route path="/collections" element={<Collections />} />
       {/* <Route path="/collections/:id" element={<Collections />} /> */}
+      <Route path="/Collections" element={<Collections />} />
       <Route path="/mens" element={<Mens />} />
       {/* <Route path="/mens/:id" element={<Mens />} /> */}
       <Route path="/womens" element={<Womens />} />
       {/* <Route path="/womens/:id" element={<Womens />} /> */}
       <Route path="/sidebar" element={<Sidebar />} />
+      <Route path="/LogIn" element={<LogIn />} />
+      <Route path="/SignIn" element={<SignIn />} />
     </Routes>
   );
 };

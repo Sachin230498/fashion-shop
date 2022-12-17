@@ -20,7 +20,7 @@ import "../CSS/Home.css";
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 // import BtnSlider from "../Components/BtnSlider";
-import BtnSlider from "../components/BtnSlider";
+import BtnSlider from "../Components/BtnSlider";
 import {
   datadotContainer,
   dataSlider,
