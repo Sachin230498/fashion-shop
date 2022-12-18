@@ -1,7 +1,7 @@
 import ZaraMan from "../media/men1.mp4"
 import zaraWoman from "../media/zaraWoman.mp4"
 import ZaraManImg1 from "../media/men2.jpg"
-import ZaraManImg2 from "../media/men3.mp4"
+import ZaraManImg2 from "../media/men5.jpg"
 import ZaraManImg3 from "../media/men4.jpg"
 import ZaraWomanImg1 from "../media/women1.jpg"
 import ZaraWomanImg2 from "../media/women2.jpg"
@@ -17,12 +17,12 @@ export const dataSlider = [
     {
       id: 1,
       title: ZaraMan,
-      target:"/men"
+      target:"/mens"
     },
     {
       id: 2,
       title: zaraWoman,
-      target:"/women"
+      target:"/womens"
     },{
       id: 3,
       title: ZaraKids,
@@ -39,12 +39,12 @@ export const dataSlider = [
       id: 'sf1',
       title: "Woman",
       class:"sliderFooter active",
-      subTitle: "/women"
+      subTitle: "/womens"
     },
     {
       id: 'sf2',
       title: "Man",
-      subTitle: "/men"
+      subTitle: "/mens"
     },{
       id: 'sf3',
       title: "Kids",
@@ -71,16 +71,7 @@ export const dataSlider = [
       title:"dots4",
       subTitle: "#box4"
     },
-    {
-      id:"d5",
-      title:"dots5",
-      subTitle: "#box5"
-    },
-    {
-      id:"d6",
-      title:"dots6",
-      subTitle: "#box6"
-    },
+ 
   ]
   export const imageSlider=[
    [

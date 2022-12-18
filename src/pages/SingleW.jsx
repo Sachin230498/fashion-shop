@@ -29,10 +29,12 @@ const SingleW = () => {
 
   console.log(womDetails);
   return (
-    <Box justifyContent="center" w="1000px">
-      <Flex>
-        <Box>
-        <Box>
+    <Box w="100%">
+
+      <Flex w="1000px" marginLeft="50">
+   
+        <Box marginTop="100px">
+        <Box >
         <Grid templateColumns="repeat(6, 1fr)" gap={7} mx={{ base: '0', md: '10', lg: '20', xl: '28' }} >
                             <GridItem colSpan={2} placeItems='end' display={{ base: 'none', lg: 'grid' }}>
                                 <Box ml='14' mr='20' mb='6 ' mt="20">
@@ -81,10 +83,10 @@ const SingleW = () => {
 
         </Box>
         </Box>
-        <Box w="7900px" ml="12" mt="20">
+        <Box  box-shadow="rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" marginTop="200px" w="7900px" ml="12">
           <img src={womDetails.image} alt="prof-pic" />
         </Box>
-        <Box w="900px" mt="20" mr="-20">
+        <Box marginTop="200px" w="900px"  mr="-20">
           <p>Name : {womDetails.name}</p>
           <p>Price : {womDetails.price}</p>
           <Text fontSize="xs" color='gray.500' mb={7}>MRP incl. of all taxes</Text>
@@ -111,9 +113,8 @@ const SingleW = () => {
           <Text fontSize="xs" mt='10' mb='2'>CHECK IN-STORE AVAILABILITY</Text>
           <Text fontSize="xs" my='2'>DELIVERY, EXCHANGES AND RETURNS</Text>
         </Box>
-        
+      
       </Flex>
-
       <Womens></Womens>
     </Box>
   );

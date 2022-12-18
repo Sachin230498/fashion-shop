@@ -18,10 +18,11 @@ const Kids = () => {
   return (
     <Box
       w="90%"
-      margin="auto"
+      marginLeft="40px"
       justifyContent="center"
       alignItems="center"
-      bg="white"
+      bg="background-color: rgb(191, 212, 220);"
+      paddingBottom="20px"
     >
       <Navbar />
       <br />

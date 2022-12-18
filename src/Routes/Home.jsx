@@ -1,25 +1,12 @@
 import {
   Box,
-  Button,
-  ButtonGroup,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
-  Icon,
   Image,
-  StackDivider,
-  useDisclosure,
-  VStack,
 } from "@chakra-ui/react";
-import React, { useContext, useEffect, useState } from "react";
-//import { Flex, Spacer } from '@chakra-ui/react'
+import React, { useEffect, useState } from "react";
 import "../CSS/Home.css";
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
-// import BtnSlider from "../Components/BtnSlider";
+
 import BtnSlider from "../components/BtnSlider";
 import {
   datadotContainer,
@@ -27,9 +14,8 @@ import {
   dataSliderFooter,
   imageSlider,
 } from "../Data/data";
-//import { HamburgerIcon } from '@chakra-ui/icons';
-//import { AuthContext } from '../Context/AuthContext';
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export const Home = () => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -52,19 +38,11 @@ export const Home = () => {
         setactive("dots2");
         setColor("Black");
       }
-      if (scrollCheck > 900) {
+      if (scrollCheck > 800) {
         setactive("dots3");
         setColor("White");
       }
-      if (scrollCheck > 3000) {
-        setactive("dots4");
-        setColor("Black");
-      }
-      if (scrollCheck > 1789) {
-        setactive("dots5");
-        setColor("white");
-      }
-      if (scrollCheck > 1789) {
+      if (scrollCheck > 1500) {
         setactive("dots4");
         setColor("Black");
       }
@@ -88,7 +66,8 @@ export const Home = () => {
   };
 
   return (
-    <div className="homeMain">
+    <div>
+    <div className="homeMain" bg={color}>
       <Navbar />
 
       <div className="container-sliderFooter">
@@ -136,13 +115,13 @@ export const Home = () => {
         <div className="container">
           {dataSlider.map((obj, index) => {
             return (
-              <div
+              <div 
                 key={obj.id}
                 className={
                   slideIndex === index + 1 ? "slide active-anim" : "slide"
                 }
               >
-                <RouterLink to="/search">
+                <RouterLink to="">
                   <video className="vedio" autoPlay loop muted>
                     <source
                       src={process.env.PUBLIC_URL + obj.title}
@@ -174,9 +153,10 @@ export const Home = () => {
                   slideIndex === index + 1 ? "slide active-anim" : "slide"
                 }
               >
-                <RouterLink to="/search">
+                <RouterLink to="">
                   <Image w="100vw" h="100vh" src={obj.title} />
                   <video className="vedio" autoPlay loop muted>
+                    
                     <source
                       src={process.env.PUBLIC_URL + obj.title}
                       type="video/mp4"
@@ -199,7 +179,7 @@ export const Home = () => {
                   slideIndex === index + 1 ? "slide active-anim" : "slide"
                 }
               >
-                <RouterLink to="/search">
+                <RouterLink >
                   <Image w="100vw" h="100vh" src={obj.title} />
                 </RouterLink>
               </div>
@@ -217,7 +197,7 @@ export const Home = () => {
                   slideIndex === index + 1 ? "slide active-anim" : "slide"
                 }
               >
-                <RouterLink to="/search">
+                <RouterLink to="">
                   <Image w="100vw" h="100vh" src={obj.title} />
                 </RouterLink>
               </div>
@@ -225,6 +205,9 @@ export const Home = () => {
           })}
         </div>
       </Box>
+      <Footer/>
     </div>
+    
+      </div>
   );
 };

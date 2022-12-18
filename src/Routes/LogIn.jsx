@@ -1,9 +1,7 @@
-//  import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
-import "../CSS/Login.css"
 import React, { useContext, useState } from "react"
 import { Box, Button, ButtonGroup, Drawer, DrawerBody, DrawerCloseButton, DrawerContent , DrawerHeader, DrawerOverlay, Heading, Icon,Input,InputGroup,InputRightElement,Stack,StackDivider, Text, useDisclosure, VStack } from '@chakra-ui/react'
 import { Flex, Spacer } from '@chakra-ui/react'
- import Footer from "../components/Footer"
+import  "../CSS/Home.css"
 import { Link as RouterLink, useNavigate  } from "react-router-dom";
 import { HamburgerIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { AuthContext } from "../Context/AuthContext";
@@ -22,22 +20,13 @@ export const Login=()=>{
       event.preventDefault();
       if(state.email===email && state.password===password){
         dispatch({
-          type:"logIn"
+          type:"login"
         })
         Navigate("/")
       }
     }
     return <>
-   <Flex className='navbarAll' w='100%' pt='10px' gap={[0,2,2]} flexDir={["column","row","row"]}>
-    <Flex gap='2'>
-    <Box>
-     
-    </Box>
-   
-    </Flex>
-  <Spacer />
-   
-  </Flex>
+
 
 <Box p={4} ml={{ base: "2em", md: "4em",lg:"6em" }} mt="30vh"display={{ md: 'flex',lg:'flex' }} >
 
@@ -67,9 +56,8 @@ export const Login=()=>{
   <Text fontSize='xs'>IF YOU STILL DON'T HAVE A ZARA.COM ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.</Text>
   <Text fontSize='xs'>BY GIVING US YOUR DETAILS, PURCHASING IN ZARA.COM WILL BE FASTER AND AN ENJOYABLE EXPERIENCE.</Text>
 </Stack>
-<RouterLink to="/SignIn"><Button size='md' mt="1em" width="50%" color='white' bg='black' borderRadius='none' >Create Account</Button></RouterLink>
+<RouterLink to="/register"><Button size='md' mt="1em" width="50%" color='white' bg='black' borderRadius='none' >Create Account</Button></RouterLink>
 </Box>
 </Box>
-<Footer/>
     </>
 }

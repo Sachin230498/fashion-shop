@@ -22,9 +22,10 @@ const Womens = () => {
       margin="auto"
       justifyContent="center"
       alignItems="center"
-      bg="white"
+      bg="grey"
+      paddingBottom="20px"
     >
-      <Navbar />
+      <Navbar  />
       <br />
       <Box
         w="100px"
@@ -51,7 +52,7 @@ const Womens = () => {
               width="250px"
               height="380px"
               display="block"
-              marginLeft="50px"
+              marginLeft="22px"
               src={post.image}
               alt={post.name}
               onClick={() => {

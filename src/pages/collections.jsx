@@ -21,7 +21,7 @@ const Collections = () => {
         justifyContent="center"
         gap="6"
         mx="auto"
-        mt="4"
+        mt="20"
         display="flex"
         w="60%"
       >

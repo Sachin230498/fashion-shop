@@ -28,9 +28,9 @@ const SingleK = () => {
 
   console.log(kidDetails);
   return (
-    <Box justifyContent="center" w="1000px">
-      <Flex>
-        <Box>
+    <Box justifyContent="center" w="100%">
+      <Flex w="1000px" marginLeft="50">
+        <Box marginTop="100px">
         <Box>
         <Grid templateColumns="repeat(6, 1fr)" gap={7} mx={{ base: '0', md: '10', lg: '20', xl: '28' }} >
                             <GridItem colSpan={2} placeItems='end' display={{ base: 'none', lg: 'grid' }}>
@@ -80,10 +80,10 @@ const SingleK = () => {
 
         </Box>
         </Box>
-        <Box w="7900px" ml="12" mt="20">
+        <Box w="7900px" ml="12" marginTop="200px">
           <img src={kidDetails.image} alt="prof-pic" />
         </Box>
-        <Box w="900px" mt="20" mr="-20">
+        <Box w="900px" marginTop="200px" mr="-20">
           <p>Name : {kidDetails.name}</p>
           <p>Price : {kidDetails.price}</p>
           <Text fontSize="xs" color='gray.500' mb={7}>MRP incl. of all taxes</Text>
