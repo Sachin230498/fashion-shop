@@ -1,187 +1,92 @@
-import React, { useState } from "react";
-import "../CSS/SignIn.css"
-import { useDispatch } from 'react-redux'
-import { useNavigate } from "react-router-dom"
+import React, { useContext } from "react"
+import { Box, Button, ButtonGroup, Drawer, DrawerBody, DrawerCloseButton, DrawerContent , DrawerHeader, DrawerOverlay, Heading, Icon,Input,InputGroup,InputRightElement,StackDivider, useDisclosure, VStack } from '@chakra-ui/react'
+import { Flex, Spacer } from '@chakra-ui/react'
+// import  "../CSS/Navbar.css"
+import { Link as RouterLink, useNavigate  } from "react-router-dom";
+import { HamburgerIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { AuthContext } from "../Context/AuthContext";
 import Footer from "../components/Footer";
-import { initializeApp } from "firebase/app";
-import { signin } from '../redux/Auth/action'
-import { login } from "../redux/Auth/action";
-import LogIn from "./LogIn";
 
-const SignIn = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [data, setData] = useState({
-    email: "",
-    phone: "",
-    password: "",
-    name: "",
-    repeatpassword: ""
-  })
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDCHvdgABXgjtj6C3-55D2colSpVF05NTI",
-    authDomain: "zara-project-adec4.firebaseapp.com",
-    projectId: "zara-project-adec4",
-    storageBucket: "zara-project-adec4.appspot.com",
-    messagingSenderId: "1083442232261",
-    appId: "1:1083442232261:web:24d99e9bc4f6e92e49e9ac",
-    measurementId: "G-JLT9HVM9BX"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const onclickhandler = (e) => {
-    e.preventDefault();
-    if (data.password === data.repeatpassword) {
-      if (data.email && data.password) {
-        dispatch(signin(data.email, data.password)).then(() => {
-          alert("Signup Successfull")
-          navigate('/login')
-        })
-      } else {
-        alert("Please Fill all requires Fields")
-      }
-    } else {
-      alert("Repeat Password Must Be Same")
+export const Signup=()=>{
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
+    const [show, setShow] = React.useState(false)
+    const [email, setEmail] = React.useState("")
+    const [password, setPassword] = React.useState("")
+    const [user, setUser] = React.useState("")
+    const handleClick = () => setShow(!show)
+    const {dispatch}=useContext(AuthContext)
+    const Navigate=useNavigate()
+    const handleSignup=(event)=>{
+        event.preventDefault()
+        let action={
+            type:"signup",
+            payload:{
+                email:email,
+                password:password,
+                user:user
+            }
+        }
+        if(email!=="" && password!=="" && user!==""){
+            dispatch(action)
+            Navigate("/login")
+        }else{
+            alert("Please Enter Your Details")
+        }
     }
-  }
-  return (
+    
+    return <>
+   <Flex className='navbarAll' w='100%' pt='10px' gap={[0,2,2]} flexDir={["column","row","row"]}>
+    <Flex gap='2'>
+     
+   
+    </Flex>
+ 
+  <ButtonGroup className='navbtnbox' gap='2' ml={["2em",0,0]} pt='0.7rem' mr={[0,null,'1rem']}>
+   
+  </ButtonGroup>
+</Flex>
 
-    <>
-      <div className='navbar_space'></div>
-      <div className='signin_main_box'>
-        <h3>PERSONAL DETAILS</h3>
-        <div className='personal_company_toggle'>
-          <div >
-            <input type="radio" name="a" />
-            <label htmlFor="">PERSONAL </label>
-          </div>
-          <div>
-            <input type="radio" name="a" onClick={() => {
-              navigate("/company")
-            }} />
-            <label htmlFor="">COMPANY</label>
-          </div>
-        </div>
+<Box p={4} ml={{ base: "2em", md: "4em",lg:"6em" }} mt="30vh"display={{ md: 'flex',lg:'flex' }} >
 
-        <div className='signin_second_box'>
-          <div>
-            <form action="">
-              <label htmlFor="">E-MAIL</label><br />
-              {/* <input type="email" placeholder='Enter Email' name="email" onChange={onchnageHandler}/><br /><br /> */}
-              <input type="email" onChange={(e) => setData({ ...data, email: e.target.value })} placeholder='Enter Email' required /><br /><br />
-              <hr />
-
-              <label htmlFor="">PASSWORD</label><br />
-              {/* <input type="password" placeholder='Enter Password' name="password" onChange={(e)=>setData({...data,name:e.target.value})} /><br /><br /> */}
-              <input type="password" placeholder="Enter Password" onChange={(e) => setData({ ...data, password: e.target.value })} required /><br /><br />
-              <hr />
-              <label htmlFor="">NAME</label><br />
-              <input type="text" placeholder='NAME' onChange={(e) => setData({ ...data, name: e.target.value })} /><br /><br />
-              <hr />
-              <label htmlFor="">ADDRESS</label><br />
-              <input type="text" placeholder='ADDRESS' /><br /><br />
-              <hr />
-              <label htmlFor="">LOCALITY</label><br />
-              <input type="text" placeholder='LOCALITY' /><br /><br />
-              <hr />
-              <label htmlFor="">STATE</label><br />
-              <select>
-                {/* <select  id="" name="state" onChange={onchnageHandler}> */}
-                <option value="--">---</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <option value="Assam">Assam</option>
-                <option value="Bihar">Bihar</option>
-                <option value="Chandigarh">Chandigarh</option>
-                <option value="Chhattisgarh">Chhattisgarh</option>
-                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
-                <option value="Daman and Diu">Daman and Diu</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Lakshadweep">Lakshadweep</option>
-                <option value="Puducherry">Puducherry</option>
-                <option value="Goa">Goa</option>
-                <option value="Gujarat">Gujarat</option>
-                <option value="Haryana">Haryana</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                <option value="Jharkhand">Jharkhand</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Kerala">Kerala</option>
-                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Manipur">Manipur</option>
-                <option value="Meghalaya">Meghalaya</option>
-                <option value="Mizoram">Mizoram</option>
-                <option value="Nagaland">Nagaland</option>
-                <option value="Odisha">Odisha</option>
-                <option value="Punjab">Punjab</option>
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Sikkim">Sikkim</option>
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Telangana">Telangana</option>
-                <option value="Tripura">Tripura</option>
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                <option value="Uttarakhand">Uttarakhand</option>
-                <option value="West Bengal">West Bengal</option>
-              </select> <br /><br />
-              <hr />
-              
-            </form>
-          </div>
-          <div >
-            <label htmlFor=""></label><br />
-            {/* <input type="email" placeholder=''/><br /><br /> */}
-
-            <label htmlFor="">REPEAT PASSWORD</label><br />
-            <input type="email" placeholder='REPEAT PASSWORD' onChange={(e) => setData({ ...data, repeatpassword: e.target.value })} /><br /><br />
-            <hr />
-
-            <label htmlFor="">PINCODE</label><br />
-            <input type="email" placeholder='PINCODE' /><br /><br />
-            <hr />
-
-            <label htmlFor="">MORE INFO</label><br />
-            <input type="email" placeholder='OPTIONAL' /><br /><br />
-            <hr />
-
-            <label htmlFor="">CITY</label><br />
-            <input type="email" placeholder='CITY' /><br /><br />
-            <hr />
-
-            <label htmlFor="">REGION</label><br />
-            <input type="email" placeholder='INDIA' /><br /><br />
-            <hr />
-
-          </div>
-          <div></div>
-        </div>
-        <div className="submitSection">
-                <div className='prefix_telephone'>
-                  <div>
-                    PREFIX <br />
-                    +91
-                  </div>
-                  <div>
-                    <label htmlFor="">TELEPHONE</label><br />
-                    <input type="number" placeholder='TELEPHONE' onChange={(e) => setData({ ...data, phone: e.target.value })} />
-                    <hr />
-                  </div>
-                </div>
-                <div className="checkbox_input">
+<Box mr={{ md: '13rem',lg:'8rem' }}>
+<Heading size='lg' mb='1em'>Create Account</Heading>
+<form onSubmit={handleSignup}>
+<Input variant='flushed' onChange={(e)=>setUser(e.target.value)} value={user} placeholder='Full Name' />
+<Input variant='flushed' onChange={(e)=>setEmail(e.target.value)} value={email} placeholder='E-MAIL' />
+<InputGroup size='md'>
+      <Input
+        pr='4.5rem'
+        type={show ? 'text' : 'password'}
+        value={password} onChange={(e)=>setPassword(e.target.value)}
+        placeholder='Create password'
+        variant='flushed'
+      />
+      <InputRightElement width='4.5rem'>
+        <Button h='1.75rem' size='sm' onClick={handleClick} variant='ghost'>
+          {show ? <Icon as={ViewOffIcon}/> : <Icon as={ViewIcon}/>}
+        </Button>
+      </InputRightElement>
+    </InputGroup>
+<>
+<div className="checkbox_input">
                   <input type="checkbox" /><label htmlFor="">I WISH TO RECEIVE ZARA NEWS ON MY E-MAIL</label><br />
+                  <hr/>
                   <input type="checkbox" /><label htmlFor="">I ACCEPT THE PRIVACY STATEMENT</label>
                 </div>
-                <button type="submit" onClick={onclickhandler}>CREATE ACCOUNT</button>
-              </div>
+</>
+  
+    <Input type='Submit' mt='1em' value="Signup" bg="black" cursor='pointer' color='white' borderRadius='none'/>
+</form>
 
-      </div>
-
-      <Footer />
+</Box>
+<Box width={{ base: "60vw", md: "40vw",lg:"30vw" }} mt={{ base: 4, md:"4em"}}>
+<Input variant='flushed' placeholder='Address' />
+<Input variant='flushed' placeholder='Pincode' />
+<Input variant='flushed' placeholder='Phone Number' />
+<Input variant='flushed' placeholder=' Loaclity' />
+</Box>
+</Box>
+<Footer/>
     </>
-  );
-};
-
-export default SignIn;
+}

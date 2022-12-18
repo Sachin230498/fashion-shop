@@ -21,7 +21,7 @@ import Companylogin from "./Company";
 // import { Checkout } from "./Checkout"
 // import { Kids } from "./Kids"
    
- import SignIn from "./SignIn";
+ import {Signup} from "./SignIn";
 import SingleW from "../pages/SingleW";
 import SingleC from "../pages/SingleC";
 import SingleM from "../pages/SingleM";
@@ -56,7 +56,7 @@ export const AllRoutes = () => {
       <Route path="/sidebar" element={<Sidebar />} />
       {/* <Route path="/LogIn" element={<LogIn />} /> */}
 
-      <Route path="/SignIn" element={<SignIn />} />
+      <Route path="/SignIn" element={<Signup />} />
     </Routes>
   );
 };

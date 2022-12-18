@@ -10,23 +10,23 @@ import { AuthContext } from "../Context/AuthContext";
 
 
 export const Login=()=>{
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = React.useRef()
-    const [show, setShow] = React.useState(false)
-    const {state,dispatch}=useContext(AuthContext)
-    const [email,setEmail]=useState("")
-    const [password,setPassword]=useState("")
-    const Navigate=useNavigate()
-    const handleClick = () => setShow(!show)
-    const handleLogin=(event)=>{
-      event.preventDefault();
-      if(state.email===email && state.password===password){
-        dispatch({
-          type:"logIn"
-        })
-        Navigate("/")
-      }
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
+  const [show, setShow] = React.useState(false)
+  const {state,dispatch}=useContext(AuthContext)
+  const [email,setEmail]=useState("")
+  const [password,setPassword]=useState("")
+  const Navigate=useNavigate()
+  const handleClick = () => setShow(!show)
+  const handleLogin=(event)=>{
+    event.preventDefault();
+    if(state.email===email && state.password===password){
+      dispatch({
+        type:"login"
+      })
+      Navigate("/")
     }
+  }
     return <>
    <Flex className='navbarAll' w='100%' pt='10px' gap={[0,2,2]} flexDir={["column","row","row"]}>
     <Flex gap='2'>
