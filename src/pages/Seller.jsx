@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate } from 'react-router'
-import Adminhome from '../Components/admin/adminhome'
+import Adminhome from '../components/admin/adminhome'
 import { Findshop } from '../redux/actios/shopAction'
 
 function Seller() {
