@@ -16,10 +16,10 @@ import { Home } from "./Home"
 
 
 // import login from "../Routes/LogIn";
-import AddProduct from "../Components/admin/addproduct"
-import AddShop from "../Components/admin/AddShop"
+import AddProduct from "../components/admin/addproduct"
+import AddShop from "../components/admin/AddShop"
 
-import LoginSignup from "../Components/admin/LoginSignup"
+import LoginSignup from "../components/admin/LoginSignup"
 import Seller from "../pages/Seller"
 import { Login } from "../Routes/LogIn";
 // import { login } from "../redux/Auth/action";
