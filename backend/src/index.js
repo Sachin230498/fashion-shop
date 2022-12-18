@@ -6,17 +6,19 @@ let cors=require("cors")
 let PORT=process.env.PORT
 let connect=require("./config/db")
 let userRoute=require("./routes/user.route")
-// let blogRoute=require("./features/blog/blog.Route")
+let shopRoute=require("./routes/shop.route")
+let cart=require("./routes/cart.route")
 // let passport=require("./features/oauth/githubAuth")
 const {Server}=require("socket.io")
-const Redis = require('ioredis');
-const fs = require('fs');
+// const Redis = require('ioredis');
+// const fs = require('fs');
+const product=require("./routes/product.route")
 
-const redis = new Redis({
-    host: 'redis-12521.c246.us-east-1-4.ec2.cloud.redislabs.com',
-    port: 12521,
-    password: 'T4c2Hc8aDhemxBf69YrM5trlissMYgCS'
-});
+// const redis = new Redis({
+//     host: 'redis-12521.c246.us-east-1-4.ec2.cloud.redislabs.com',
+//     port: 12521,
+//     password: 'T4c2Hc8aDhemxBf69YrM5trlissMYgCS'
+// });
 
 
 
@@ -26,11 +28,13 @@ const io=new Server(httpServer)
 app.use(cors())
 app.use(express.json())
 app.use((req,res,next)=>{
-req.redis=redis
+// req.redis=redis
 next()
 })
 app.use("/users",userRoute)
-// app.use("/blogs",blogRoute)
+app.use("/shop",shopRoute)
+app.use("/products",product)
+app.use("/cart",cart)
 
 
 

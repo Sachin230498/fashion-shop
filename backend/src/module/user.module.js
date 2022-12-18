@@ -17,6 +17,7 @@ const userSchema=new mongoose.Schema({
     },
     DOB: {type:String, min: 20, max: 100},
     gender: {type:String, enum: ["Male", "Female"]},
+    mobile:{type:String,required:true}
 })
 const User=mongoose.model("user",userSchema)
 

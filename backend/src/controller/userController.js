@@ -4,7 +4,7 @@ const User=require("../module/user.module")
 const dustbin=require("../module/dustbin.model")
 const userSignup=(async (req,res)=>{
      
-    let {email,password,name,gender,role,pic,DOB,mobaile}=req.body
+    let {email,password,name,gender,role,pic,DOB,mobile}=req.body
         password= await argon2.hash(password);
         if(role=="admin"){
             return res.send("wrong credentials")
@@ -33,13 +33,14 @@ const userSignup=(async (req,res)=>{
 // -------------------------------------------------------------------------------------------------------
 const userLogin=(async(req,res)=>{
     let {email,password}=req.body
+        console.log(email)
     try{
-        let data=await req.redis.get(email)
-        data=JSON.parse(data)
-       if(data){
-        return res.send({message:"login sucessfull",...data})
+    //     let data=await req.redis.get(email)
+    //     data=JSON.parse(data)
+    //    if(data){
+    //     return res.send({message:"login sucessfull",...data})
         
-       }
+    //    }
         let user=await User.findOne({email})
 
         if(user){
@@ -47,8 +48,8 @@ const userLogin=(async(req,res)=>{
         if(varifieduser){
             let token=jwt.sign({id:user._id,email:user.email,role:user.role},process.env.TokenSecret,{expiresIn:"7 days"})
             let refresh=jwt.sign({id:user._id,email:user.email,role:user.role},process.env.RefreshSecret)
-            let redisdata={token,refresh}
-          req.redis.set(email,JSON.stringify(redisdata),"EX",30)
+            // let redisdata={token,refresh}
+        //   req.redis.set(email,JSON.stringify(redisdata),"EX",30)
           console.log("mongo")
            
         return res.send({message:"login sucessfull",token,refresh})
@@ -75,11 +76,11 @@ const RefreshUser=(async(req,res)=>{
         let refresh=req.headers["authorization"]
     let varify=jwt.verify(refresh,process.env.RefreshSecret)
     if(varify){
-        let token=jwt.sign({id:varify.id,email:varify.email,role:user.role},process.env.TokenSecret,{expiresIn:"1 hours"})
+        let token=jwt.sign({id:varify.id,email:varify.email,role:varify.role},process.env.TokenSecret,{expiresIn:"1 hours"})
         return res.send({message:"refresh done",token})
 
     }else{
-        await dustbin.create({token})
+        await dustbin.create({refresh})
         return res.status(404).send("login again")
     }
     }catch(e){
