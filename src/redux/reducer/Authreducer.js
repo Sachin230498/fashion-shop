@@ -1,4 +1,4 @@
-import {SIGNUP,LOGIN,LODING,ERROR} from "../actiontypes/Authactionstypes"
+import {SIGNUP,LOGIN,LODING,ERROR,LOGOUT} from "../actiontypes/Authactionstypes"
 const intialState={
     singupMessage:"",
     isSeller:false,
@@ -10,11 +10,15 @@ const intialState={
     message:""
 }
 
-export const Authreducer=(state=intialState,{type,paylode})=>{
+const init=JSON.parse(localStorage.getItem("sellerinfo"))||intialState
+
+export const AdminAuthReducer=(state=init,{type,paylode})=>{
 
     switch(type){
-        case LOGIN : return {
-            ...state,isAuth:true,token:paylode.token,refreshtoken:paylode.refresh,isloding:false,isError:false,errormessage:""
+        case LOGIN :
+        localStorage.setItem("sellerinfo",JSON.stringify({...state,isAuth:true,token:paylode.token,refreshtoken:paylode.refresh,isloding:false,isError:false,errormessage:"",isSeller:true}))    
+        return {
+            ...state,isAuth:true,token:paylode.token,refreshtoken:paylode.refresh,isloding:false,isError:false,errormessage:"",isSeller:true
         }
         case LODING:return {
             ...state,isloding:true,errormessage:"",isError:false
@@ -25,6 +29,9 @@ export const Authreducer=(state=intialState,{type,paylode})=>{
         case SIGNUP:return {
             ...state,message:"signup successful"
         }
+        case LOGOUT:
+            localStorage.setItem("sellerinfo",JSON.stringify(intialState))    
+        return intialState
 
 
 

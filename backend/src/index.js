@@ -7,10 +7,12 @@ let PORT=process.env.PORT
 let connect=require("./config/db")
 let userRoute=require("./routes/user.route")
 let shopRoute=require("./routes/shop.route")
+let cart=require("./routes/cart.route")
 // let passport=require("./features/oauth/githubAuth")
 const {Server}=require("socket.io")
-const Redis = require('ioredis');
-const fs = require('fs');
+// const Redis = require('ioredis');
+// const fs = require('fs');
+const product=require("./routes/product.route")
 
 // const redis = new Redis({
 //     host: 'redis-12521.c246.us-east-1-4.ec2.cloud.redislabs.com',
@@ -31,6 +33,8 @@ next()
 })
 app.use("/users",userRoute)
 app.use("/shop",shopRoute)
+app.use("/products",product)
+app.use("/cart",cart)
 
 
 

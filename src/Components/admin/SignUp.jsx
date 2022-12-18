@@ -3,7 +3,7 @@ import {Box, Button, Flex, FormControl,  FormLabel,  Input, InputGroup, InputLef
 import { useState } from 'react'
 import {UplodeFile} from "./functions"
 import { useDispatch, useSelector, useStore } from 'react-redux'
-import { signup } from '../redux/actios/Authactions'
+import { signup } from '../../redux/actios/Authactions'
 
 let init={
 

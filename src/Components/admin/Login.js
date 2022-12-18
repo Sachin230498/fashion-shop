@@ -1,7 +1,8 @@
 import { Box, Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, useToast, VStack } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { login } from '../redux/actios/Authactions'
+import { useNavigate } from 'react-router'
+import { login } from '../../redux/actios/Authactions'
 let init={
     email:"",
     password:"" 
@@ -9,13 +10,14 @@ let init={
 function Login() {
     let [showPassword,setShowpassword]=useState(false)
     let [creads,setCreads]=useState(init)
+    let navigate=useNavigate()
     let dispatch=useDispatch()
     const toast = useToast()
     function handleSignup(e){
         setCreads({...creads,[e.target.name]:e.target.value})
       }
       function handleSubmit(){
-        dispatch(login({...creads,toast}))
+        dispatch(login({...creads,toast,navigate}))
       }
   return (
     <Box  >

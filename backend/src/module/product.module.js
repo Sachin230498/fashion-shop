@@ -4,15 +4,17 @@ let mongoose=require("mongoose")
 let productSchema=new mongoose.Schema({
     title:{type:String,required:true},
     category:String,
+    price: { type: Number },
     gender:{type:String,enum:["men","women","kids"]},
-    desc:{type:String},
-    image:[String],
+    description:{type:String},
+    images:[String],
+    color: { type: String },
     details:[{
         size:String,
         quantity:Number,
         price:Number,
     }],
-    seller:{type:mongoose.Schema.Types.ObjectId,ref:"user",autopopulate: true},
+    seller:{type:mongoose.Schema.Types.ObjectId,ref:"user"},
     review:[{
         text:String,
         rating:{
@@ -20,7 +22,7 @@ let productSchema=new mongoose.Schema({
             min: 0, max: 5
         },
         auther:{
-            author: {type:mongoose.Schema.Types.ObjectId,ref:"user",required:true},
+            author: {type:mongoose.Schema.Types.ObjectId,ref:"user"},
         }
 
     }]

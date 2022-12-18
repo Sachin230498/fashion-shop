@@ -1,8 +1,8 @@
 import { Box, Button, Flex } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
-import Login from '../component/Login'
-import SignUp from '../component/SignUp'
+import Login from './Login'
+import SignUp from './SignUp'
 
 function LoginSignup() {
     let [login,setLogin]=useState(true)
