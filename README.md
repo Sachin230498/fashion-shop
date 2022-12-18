@@ -1,7 +1,7 @@
 # Zara-Clone
 ### A clone of the online e-commerce website of Zara done during Masai Construct Week #1.
 ![zara1](https://static.zara.net/photos///contents/mkt/spots/aw22-north-man-athleticz/subhome-xmedia-50//w/1367/IMAGE-landscape-fill-8461d8f6-aa20-4b7c-bf56-ddbfe1ab66ea-default_0.jpg?ts=1670844315727)
-![zara2](https://miro.medium.com/max/1400/1*EGATegHn1EJ6PpkE8o_B7g.jpeg)
+![zara2](file:///C:/Users/Administrator/Downloads/React%20App.mhtml)
 ![zara3](https://miro.medium.com/max/1400/1*NNSNQyYQHWpC6WmEoAHftA.jpeg)
 ![zara4](https://miro.medium.com/max/1400/1*ASF-TPz0I02t87iHzEiY9g.jpeg)
 
