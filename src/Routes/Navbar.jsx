@@ -23,7 +23,7 @@ import { AuthContext } from "../Context/AuthContext";
 import Dbody from "./Menuburger";
 import Sidebar from "../components/Sidebar";
 import Gen from "../media/GenChoice.jpeg";
-import LogIn from "./LogIn";
+import Login from "./Login";
 import Search from "../Routes/Search"
 
 
@@ -40,7 +40,7 @@ const Navbar = () => {
       // console.log(scrollCheck)
       if (scrollCheck < 300) {
         setactive("dots1");
-        setColor("white");
+        setColor("grey");
       }
       if (scrollCheck > 300) {
         setactive("dots2");
@@ -121,7 +121,7 @@ const Navbar = () => {
     </RouterLink>
 
 
-   <RouterLink to="/cart">
+   <RouterLink to={state.isAuth?"/cart":"/login"}>
        <Button className='navbarbtn' 
        position="relative"
          color={color} variant='link'>

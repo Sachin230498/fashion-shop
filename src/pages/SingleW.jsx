@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import Kids from "./Kids"
+import { AddIcon, HamburgerIcon } from '@chakra-ui/icons';
 import Womens from "./womens";
-import { Select, Box, Button, Flex, Grid, GridItem, Image, Text} from "@chakra-ui/react";
+import { Select,Icon, Box, Button, Flex, Grid, GridItem, Image, Text, Spacer} from "@chakra-ui/react";
 // const getData = (url) => {
 //   return fetch(url).then((res) => res.json());
 // };
@@ -105,9 +105,22 @@ const SingleW = () => {
             </Select>
             <Text fontSize="xs" mt='5' >This product has a larger fit than usual.</Text>
           </Box>
-          <Button bg="black" color="white" mt='5'>
+          {/* <Button bg="black" color="white" mt='5'>
             ADD TO CART
-          </Button>
+          </Button> */}
+          
+
+    
+       
+             <Link to={`/productsDetails/$womens/id}`}>
+             <Button bg="black" color="white" mt='5'>Add to Cart <Spacer/><Icon as={AddIcon} /></Button>
+              {/* <Image  w="100%"  src={womDetails.image} alt={womDetails.id} /> */}
+              </Link>
+{/*              variant="ghost" position="absolute" transform="translate(0%, -100%)"
+              onClick={()=>addtoCart(el)} */}
+    
+            
+   
           <br />
           <Link to="/womens">GO BACK</Link>
           <Text fontSize="xs" mt='10' mb='2'>CHECK IN-STORE AVAILABILITY</Text>
