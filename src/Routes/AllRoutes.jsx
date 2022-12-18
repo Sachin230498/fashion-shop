@@ -18,15 +18,12 @@ import { Home } from "./Home"
 // import login from "../Routes/LogIn";
 import AddProduct from "../Components/admin/addproduct"
 import AddShop from "../Components/admin/AddShop"
-import Login from "../Components/admin/Login"
+
 import LoginSignup from "../Components/admin/LoginSignup"
 import Seller from "../pages/Seller"
 import { Login } from "../Routes/LogIn";
 // import { login } from "../redux/Auth/action";
-import React from "react";
-import { Route, Routes } from "react-router-dom";
 //import { Search } from "./Search"
-import { Home } from "./Home";
 import Collections from "../pages/collections";
 import Kids from "../pages/Kids";
 import Mens from "../pages/mens";
