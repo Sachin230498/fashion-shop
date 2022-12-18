@@ -1,9 +1,8 @@
 import React, { useContext, useState } from "react"
-import { Box, Button, ButtonGroup, Drawer, DrawerBody, DrawerCloseButton, DrawerContent , DrawerHeader, DrawerOverlay, Heading, Icon,Input,InputGroup,InputRightElement,Stack,StackDivider, Text, useDisclosure, VStack } from '@chakra-ui/react'
-import { Flex, Spacer } from '@chakra-ui/react'
+import { Box, Button,  Heading, Icon,Input,InputGroup,InputRightElement,Stack, Text, useDisclosure} from '@chakra-ui/react'
 import  "../CSS/Home.css"
 import { Link as RouterLink, useNavigate  } from "react-router-dom";
-import { HamburgerIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { AuthContext } from "../Context/AuthContext";
 
 
@@ -22,7 +21,12 @@ export const Login=()=>{
         dispatch({
           type:"login"
         })
+        alert("User login successful!")
         Navigate("/")
+      }
+      else{
+        alert("Wrong credentials !! ")
+        Navigate("/login")
       }
     }
     return <>

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react"
 import { Box, Button, ButtonGroup, Drawer, DrawerBody, DrawerCloseButton, DrawerContent , DrawerHeader, DrawerOverlay, Heading, Icon,Stack,StackDivider, Text, useDisclosure, VStack } from '@chakra-ui/react'
 import { Flex, Spacer } from '@chakra-ui/react'
-import  "../CSS/Navbar.css"
+import  "../CSS/Home.css"
 import { Link as RouterLink, useNavigate  } from "react-router-dom";
 import { HamburgerIcon} from '@chakra-ui/icons';
 import { AuthContext } from "../Context/AuthContext";

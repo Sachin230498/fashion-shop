@@ -12,12 +12,12 @@ import Womens from "../pages/womens";
 import SingleK from "../pages/SingleK";
 import Sidebar from "../components/Sidebar";
 import Companylogin from "./Company";
-import SignIn from "./SignIn";
 import SingleW from "../pages/SingleW";
 import SingleC from "../pages/SingleC";
 import SingleM from "../pages/SingleM";
 import { Search } from "./Search";
 import { Signup } from "./Signup"
+import { Account } from "./Accounts"
 
 export const AllRoutes = () => {
   return (
@@ -35,10 +35,8 @@ export const AllRoutes = () => {
       <Route path='/company' element={<Companylogin/>}></Route>
       <Route path='/LogIn' element={<Login />} />
       <Route path="/sidebar" element={<Sidebar />} />
-      <Route path="/register" element={<SignIn />} />
-      {/* <Route path="/register"  element={<Signup/>}/> */}
-
-      
+      <Route path="/register"  element={<Signup/>}/>
+      <Route path="/account"  element={<Account/>}/>
 
     </Routes>
   );
