@@ -39,16 +39,16 @@ export const dataSlider = [
       id: 'sf1',
       title: "Woman",
       class:"sliderFooter active",
-      subTitle: "/womens"
+      subTitle: "/women"
     },
     {
       id: 'sf2',
       title: "Man",
-      subTitle: "/mens"
+      subTitle: "/men"
     },{
       id: 'sf3',
       title: "Kids",
-      subTitle: "/kids"
+      subTitle: "/kid"
     }
   ]
   export const datadotContainer = [

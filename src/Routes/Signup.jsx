@@ -5,6 +5,7 @@ import  "../CSS/Home.css"
 import { Link as RouterLink, useNavigate  } from "react-router-dom";
 import { HamburgerIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { AuthContext } from "../Context/AuthContext";
+import Navbar from "./Navbar";
 
 
 export const Signup=()=>{
@@ -34,8 +35,11 @@ export const Signup=()=>{
             alert("Please Enter Your Details")
         }
     }
-    
+    const signup = () => {
+        alert("User Created Successfully")
+    }
     return <>
+   <Navbar/>
 
 <Box p={4} ml={{ base: "2em", md: "4em",lg:"6em" }} mt="30vh"display={{ md: 'flex',lg:'flex' }} >
 
@@ -58,7 +62,7 @@ export const Signup=()=>{
         </Button>
       </InputRightElement>
     </InputGroup>
-    <Input type='Submit' mt='1em' value="Signup" bg="black" cursor='pointer' color='white' borderRadius='none'/>
+    <Input onClick={signup} type='Submit' mt='1em' value="Signup" bg="black" cursor='pointer' color='white' borderRadius='none'/>
 </form>
 </Box>
 <Box width={{ base: "60vw", md: "40vw",lg:"30vw" }} mt={{ base: 4, md:"4em"}}>

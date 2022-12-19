@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react"
-import { Box, Button,  Heading, Icon,Input,InputGroup,InputRightElement,Stack, Text, useDisclosure} from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, Drawer, DrawerBody, DrawerCloseButton, DrawerContent , DrawerHeader, DrawerOverlay, Heading, Icon,Input,InputGroup,InputRightElement,Stack,StackDivider, Text, useDisclosure, VStack } from '@chakra-ui/react'
+import { Flex, Spacer } from '@chakra-ui/react'
 import  "../CSS/Home.css"
 import { Link as RouterLink, useNavigate  } from "react-router-dom";
-import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { AuthContext } from "../Context/AuthContext";
+import Navbar from "./Navbar";
 
 
 export const Login=()=>{
@@ -17,21 +19,37 @@ export const Login=()=>{
     const handleClick = () => setShow(!show)
     const handleLogin=(event)=>{
       event.preventDefault();
-      if(state.email===email && state.password===password){
+      // let action={
+      //   type:"login",
+      //   payload:{
+      //       email:email,
+      //       password:password,
+      //   }
+      //   }
+      if(email==="" && password==="" ){
         dispatch({
           type:"login"
         })
-        alert("User login successful!")
+        alert("Please Enter Your Details")
+      }
+     else if(state.email===email && state.password===password){
+        dispatch({
+          type:"login"
+        })
         Navigate("/")
+        alert("Authorized User  Log in Succesfull")
       }
       else{
-        alert("Wrong credentials !! ")
-        Navigate("/login")
+        alert("User not available ,Please Signup ")
+     
       }
+     
+    
     }
     return <>
 
-
+    <Navbar />
+  
 <Box p={4} ml={{ base: "2em", md: "4em",lg:"6em" }} mt="30vh"display={{ md: 'flex',lg:'flex' }} >
 
 <Box mr={{ md: '13rem',lg:'13rem' }}>

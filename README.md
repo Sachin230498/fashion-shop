@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Zara-Clone
 ### A clone of the online e-commerce website of Zara done during Masai Construct Week #1.
 ![zara1](https://static.zara.net/photos///contents/mkt/spots/aw22-north-man-athleticz/subhome-xmedia-50//w/1367/IMAGE-landscape-fill-8461d8f6-aa20-4b7c-bf56-ddbfe1ab66ea-default_0.jpg?ts=1670844315727)
@@ -43,3 +44,5 @@ This project is a one to one clone of the online e-commerce website of "Zara" wh
 
 [Netlify Deployed Link](https://resonant-lily-7ac8fd.netlify.app)
 
+=======
+>>>>>>> final

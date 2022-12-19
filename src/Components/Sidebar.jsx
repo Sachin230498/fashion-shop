@@ -80,7 +80,7 @@ export default function Sidebar() {
                 <MenuList>
                   <Text
                     onClick={() => {
-                      navigate("/mens");
+                      navigate("/men");
                     }}
                   >
                     New/BestSeller
@@ -93,7 +93,7 @@ export default function Sidebar() {
                 <MenuList>
                   <Text
                     onClick={() => {
-                      navigate("/womens");
+                      navigate("/women");
                     }}
                   >
                     Latest/BestSeller
