@@ -18,13 +18,9 @@ export const Products=()=>{
     const [mainImg,setMainImg]=useState([])
    const {state,dispatch}=useContext(AuthContext)
     let baseUrl=""
-  // if(params.id.includes("w")){
+ 
    baseUrl="https://aakash.onrender.com/products/"+params.id
-  // }else if(params.id.includes("m")){
-  //   baseUrl="https://aakash.onrender.com/products/"+params.id
-  // }else if(params.id.includes("k")){
-  //   baseUrl="https://aakash.onrender.com/products/"+params.id
-  // }
+ 
   
     useEffect(()=>{
         fetch(baseUrl).then((res)=>{
