@@ -31,6 +31,7 @@
 
 
 
+
 // export const AllRoutes = () => {
 //   return (
 //     <Routes>
@@ -59,6 +60,8 @@
 //     </Routes>
 //   );
 // };
+
+
 
 import React from "react"
 import { Route, Routes } from "react-router-dom"
