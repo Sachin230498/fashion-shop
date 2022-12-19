@@ -225,7 +225,7 @@ else if(value==="htl"){
              justifyContent="space-between">
               <Box>{el.title}</Box> 
               <Box>&#8377; {el.price}</Box>
-              <Box>&#8377; {el._id}</Box></Box>
+              </Box>
              </Skeleton>
         </Box>
      })} 
