@@ -1,5 +1,5 @@
-import { Box, Flex,  Text } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Flex, Text } from "@chakra-ui/react";
+import React from "react";
 
 function Footer() {
   return (
@@ -7,7 +7,6 @@ function Footer() {
       <Flex align="center" justify="center" mt="15%">
         <Text fontSize="md">JOIN OUR NEWSLETTER</Text>
       </Flex>
-
       <Box>
         <Flex align="center" justify="center" mt="10%">
           <Box p="2%">
@@ -42,7 +41,7 @@ function Footer() {
           </Box>
         </Flex>
       </Box>
-      <Box p="np2%" mt={20} ml='15%'>
+      <Box p="np2%" mt={20} ml="15%">
         <Text fontSize="xs" lineHeight={1.2} fontWeight={300}>
           Name and address of the manufacturer:
         </Text>
@@ -59,4 +58,4 @@ function Footer() {
   );
 }
 
-export default Footer
+export default Footer;

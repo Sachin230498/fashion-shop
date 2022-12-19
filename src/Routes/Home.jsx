@@ -1,7 +1,4 @@
-import {
-  Box,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import "../CSS/Home.css";
 import { Link } from "react-scroll";
@@ -67,147 +64,157 @@ export const Home = () => {
 
   return (
     <div>
-    <div className="homeMain" bg={color}>
-      <Navbar />
+      <div className="homeMain" bg={color}>
+        <Navbar />
 
-      <div className="container-sliderFooter">
-        {dataSliderFooter.map((item, index) => (
-          <RouterLink to={item.subTitle}>
-            <div
-              style={{ color: color }}
-              onClick={() => setactive(item.title)}
-              className={
-                active === item.title ? "sliderFooter active" : "sliderFooter"
-              }
+        <div className="container-sliderFooter">
+          {dataSliderFooter.map((item, index) => (
+            <RouterLink to={item.subTitle}>
+              <div
+                style={{ color: color }}
+                onClick={() => setactive(item.title)}
+                className={
+                  active === item.title ? "sliderFooter active" : "sliderFooter"
+                }
+              >
+                {item.title}
+              </div>
+            </RouterLink>
+          ))}
+        </div>
+        <div className="container-dots">
+          {datadotContainer.map((item, index) => (
+            <Link
+              activeClass="active"
+              to={item.subTitle}
+              spy={true}
+              smooth={true}
+              duration={500}
+              delay={1000}
             >
-              {item.title}
-            </div>
-          </RouterLink>
-        ))}
-      </div>
-      <div className="container-dots">
-        {datadotContainer.map((item, index) => (
-          <Link
-            activeClass="active"
-            to={item.subTitle}
-            spy={true}
-            smooth={true}
-            duration={500}
-            delay={1000}
-          >
-            <div
-              id="dots"
-              onClick={() => setactive(item.title)}
-              className={active === item.title ? "dot active" : "dot"}
-            ></div>
-          </Link>
-        ))}
-      </div>
-      <BtnSlider moveSlide={prevSlide} direction={"prev"} />
-      <BtnSlider moveSlide={nextSlide} direction={"next"} />
-      <Box
-        as="section"
-        id="box1"
-        className="section "
-        bg="brand.900"
-        color="white"
-      >
-        <div className="container">
-          {dataSlider.map((obj, index) => {
-            return (
-              <div 
-                key={obj.id}
-                className={
-                  slideIndex === index + 1 ? "slide active-anim" : "slide"
-                }
-              >
-                <RouterLink to="">
-                  <video className="vedio" autoPlay loop muted>
-                    <source
-                      src={process.env.PUBLIC_URL + obj.title}
-                      type="video/mp4"
-                    />
-                  </video>
-                </RouterLink>
-              </div>
-            );
-          })}
+              <div
+                id="dots"
+                onClick={() => setactive(item.title)}
+                className={active === item.title ? "dot active" : "dot"}
+              ></div>
+            </Link>
+          ))}
+        </div>
+        <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+        <BtnSlider moveSlide={nextSlide} direction={"next"} />
+        <Box
+          as="section"
+          id="box1"
+          className="section "
+          bg="brand.900"
+          color="white"
+        >
+          <div className="container">
+            {dataSlider.map((obj, index) => {
+              return (
+                <div
+                  key={obj.id}
+                  className={
+                    slideIndex === index + 1 ? "slide active-anim" : "slide"
+                  }
+                >
+                  <RouterLink to="">
+                    <video className="vedio" autoPlay loop muted>
+                      <source
+                        src={process.env.PUBLIC_URL + obj.title}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </RouterLink>
+                </div>
+              );
+            })}
 
-          {/*  */}
-        </div>
-      </Box>
+            {/*  */}
+          </div>
+        </Box>
 
-      <Box
-        as="section"
-        id="box2"
-        className="section "
-        bg="brand.900"
-        color="white"
-      >
-        <div className="container">
-          {imageSlider[0].map((obj, index) => {
-            return (
-              <div
-                key={obj.id}
-                className={
-                  slideIndex === index + 1 ? "slide active-anim" : "slide"
-                }
-              >
-                <RouterLink to="">
-                  <Image w="100vw" h="100vh" src={obj.title} />
-                  <video className="vedio" autoPlay loop muted>
-                    
-                    <source
-                      src={process.env.PUBLIC_URL + obj.title}
-                      type="video/mp4"
-                    />
-                  </video>
-                  <Image w="100vw" h="100vh" src={obj.title} />
-                </RouterLink>
-              </div>
-            );
-          })}
-        </div>
-      </Box>
-      <Box as="section" id="box3" className="section " bg="green" color="white">
-        <div className="container">
-          {imageSlider[1].map((obj, index) => {
-            return (
-              <div
-                key={obj.id}
-                className={
-                  slideIndex === index + 1 ? "slide active-anim" : "slide"
-                }
-              >
-                <RouterLink >
-                  <Image w="100vw" h="100vh" src={obj.title} />
-                </RouterLink>
-              </div>
-            );
-          })}
-        </div>
-      </Box>
-      <Box as="section" id="box4" className="section " bg="grey" color="white">
-        <div className="container">
-          {imageSlider[2].map((obj, index) => {
-            return (
-              <div
-                key={obj.id}
-                className={
-                  slideIndex === index + 1 ? "slide active-anim" : "slide"
-                }
-              >
-                <RouterLink to="">
-                  <Image w="100vw" h="100vh" src={obj.title} />
-                </RouterLink>
-              </div>
-            );
-          })}
-        </div>
-      </Box>
-      <Footer/>
+        <Box
+          as="section"
+          id="box2"
+          className="section "
+          bg="brand.900"
+          color="white"
+        >
+          <div className="container">
+            {imageSlider[0].map((obj, index) => {
+              return (
+                <div
+                  key={obj.id}
+                  className={
+                    slideIndex === index + 1 ? "slide active-anim" : "slide"
+                  }
+                >
+                  <RouterLink to="">
+                    <Image w="100vw" h="100vh" src={obj.title} />
+                    <video className="vedio" autoPlay loop muted>
+                      <source
+                        src={process.env.PUBLIC_URL + obj.title}
+                        type="video/mp4"
+                      />
+                    </video>
+                    <Image w="100vw" h="100vh" src={obj.title} />
+                  </RouterLink>
+                </div>
+              );
+            })}
+          </div>
+        </Box>
+        <Box
+          as="section"
+          id="box3"
+          className="section "
+          bg="green"
+          color="white"
+        >
+          <div className="container">
+            {imageSlider[1].map((obj, index) => {
+              return (
+                <div
+                  key={obj.id}
+                  className={
+                    slideIndex === index + 1 ? "slide active-anim" : "slide"
+                  }
+                >
+                  <RouterLink>
+                    <Image w="100vw" h="100vh" src={obj.title} />
+                  </RouterLink>
+                </div>
+              );
+            })}
+          </div>
+        </Box>
+        <Box
+          as="section"
+          id="box4"
+          className="section "
+          bg="grey"
+          color="white"
+        >
+          <div className="container">
+            {imageSlider[2].map((obj, index) => {
+              return (
+                <div
+                  key={obj.id}
+                  className={
+                    slideIndex === index + 1 ? "slide active-anim" : "slide"
+                  }
+                >
+                  <RouterLink to="">
+                    <Image w="100vw" h="100vh" src={obj.title} />
+                  </RouterLink>
+                </div>
+              );
+            })}
+          </div>
+        </Box>
+        <Footer />
+      </div>
     </div>
-    
-      </div>
   );
 };
