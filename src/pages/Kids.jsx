@@ -4,7 +4,6 @@ import { AddIcon } from "@chakra-ui/icons";
 import { Link, useNavigate } from "react-router-dom";
 import { Select } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
-// import ProductCard1 from "../components/ProductCard1";
 import { getKidsAPI } from "../redux/kids/kids.actions";
 import Navbar from "../Routes/Navbar";
 
@@ -40,12 +39,6 @@ const Kids = () => {
       <br />
       <SimpleGrid columns={{ sm: 2, md: 3, xl: 4 }} spacing={4}>
         {kidData.map((post) => (
-          // <ProductCard1
-          //   key={post.id}
-          //   name={post.name}
-          //   image={post.image}
-          //   price={post.price}
-          // />
           <Box justifyContent="center" w="350px">
             <Image
               width="250px"

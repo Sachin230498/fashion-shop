@@ -3,7 +3,6 @@ import { Box, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-// import ProductCard from "../components/ProductCard";
 import { getCollectionsAPI } from "../redux/collections/collection.actions";
 import Navbar from "../Routes/Navbar";
 const Collections = () => {
@@ -34,12 +33,6 @@ const Collections = () => {
       </Box>
       <SimpleGrid columns={{ sm: 2, md: 3, xl: 4 }} spacing={10}>
         {collectdata.map((post) => (
-          // <ProductCard
-          //   key={post.id}
-          //   name={post.name}
-          //   image={post.image}
-          //   price={post.price}
-          // />
           <Box justifyContent="center" w="350px">
             <Image
               width="250px"
