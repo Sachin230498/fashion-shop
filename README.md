@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Zara-Clone
+### A clone of the online e-commerce website of Zara done during Masai Construct Week #1.
+![zara1](https://static.zara.net/photos///contents/mkt/spots/aw22-north-man-athleticz/subhome-xmedia-50//w/1367/IMAGE-landscape-fill-8461d8f6-aa20-4b7c-bf56-ddbfe1ab66ea-default_0.jpg?ts=1670844315727)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![zara3](https://miro.medium.com/max/1400/1*NNSNQyYQHWpC6WmEoAHftA.jpeg)
+![zara4](https://miro.medium.com/max/1400/1*ASF-TPz0I02t87iHzEiY9g.jpeg)
 
-## Available Scripts
+## Abstract
 
-In the project directory, you can run:
+This project is a one to one clone of the online e-commerce website of "Zara" which was done as a part of Masai School Construct Week in Unit6. The project includes the Landing page, Login and Signup page, Product pages for Men, Women, and Kids section. The project is truly interactive and functional with features such as Login validation, Sorting product based on keys, and Filter based on categories, Cart feature and Payment checkout. Its a colloabrative projects
 
-### `npm start`
+## Core Features
+- Login and Signup Pages
+- Login Credential Validation
+- Landing Page and Hero Section
+- Fully Functional Interactive Navigation Bar
+- Product Section based on Categories
+- Sort Feature
+- Filter Feature
+- Search Option
+- Cart Feature
+- Payment Checkout
+- Fully Resoponsive
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
+- React
+- Redux
+- ChakraUi
+- MongoDb
+- HyperText Markup Language
+- Cascading Style Sheets
+- Vanilla JavaScript ES6
+- Local Storage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Team
+- @SachinMasai       =>  Sachin Pathe
+- @svijaym           =>  S Vijayaprasad
+- @aakashindoriya    =>  Aakash Indoriya
+- @Satya057          =>  Satyaprakash Singh
+- @Suraj2320         =>  Suraj Pawar
 
-### `npm test`
+## External Links
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Netlify Deployed Link](https://resonant-lily-7ac8fd.netlify.app)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
