@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Button,  Flex,  FormControl,  FormLabel,  Input, InputGroup, InputRightElement,  Select,  useToast, VStack} from "@chakra-ui/react"
+import {Box, Button,  Flex,  FormControl,  FormLabel,  Input, InputGroup, InputRightElement,  Select,  Spinner,  useToast, VStack} from "@chakra-ui/react"
 import { useState } from 'react'
 import { useDispatch, useSelector, useStore } from 'react-redux'
 import { addProduct } from '../../redux/actios/shopAction'
@@ -19,7 +19,9 @@ let init={
   }
 function AddProduct() {
 let shop=useSelector((store)=>store.shop)
-console.log(shop.shopdata._id)
+
+
+
 let nevigate=useNavigate()
 let dispatch=useDispatch()
 const toast = useToast()
@@ -57,9 +59,13 @@ const toast = useToast()
       data[index][event.target.name] = event.target.value;
       setInputFields(data);
   }
+
+  if(shop.islodding){
+    return(<Spinner size={"xl"} />)
+  }
     
   return (
-    <Box w="60%" m={"auto"} p={10}>
+    <Box w="60%" m={"auto"} p={10} mt={50}>
         <VStack spacing={2}>
         <FormControl id="pic">
         <FormLabel>Upload your Picture</FormLabel>

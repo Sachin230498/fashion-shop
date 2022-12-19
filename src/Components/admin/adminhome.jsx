@@ -63,7 +63,9 @@ import { useNavigate } from 'react-router';
                  {shopinfo.createShop?"Create Your Shop":"Add products"}
                </Button>
              }
-              <Button rounded={'full'} disabled={shopinfo.createShop?true:false}>My Shop</Button>
+              <Button rounded={'full'} disabled={shopinfo.createShop?true:false}
+                onClick={()=>{navigate("/seller/shop")}}
+              >My Shop</Button>
               
             </Stack>
           </Stack>

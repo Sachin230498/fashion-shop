@@ -25,16 +25,17 @@ import { Cart } from "./Cart"
 import { Checkout } from "./Checkout"
 import { Home } from "./Home"
 import { Kids } from "./Kids"
-import { Login } from "./Login"
+import { Login } from "./LogIn"
 import { Men } from "./Men"
 import { Products } from "./Products"
 import { Search } from "./Search"
 import { Signup } from "./Signup"
 import { Women } from "./Women"
-import AddProduct from "../components/admin/addproduct"
-import AddShop from "../components/admin/AddShop"
-import LoginSignup from "../components/admin/LoginSignup"
+import AddProduct from "../Components/admin/addproduct"
+import AddShop from "../Components/admin/AddShop"
+import LoginSignup from "../Components/admin/LoginSignup"
 import Seller from "../pages/Seller"
+import Myshop from "../Components/admin/Myshop"
 
 export const AllRoutes=()=>{
 return  <Routes>
@@ -54,6 +55,8 @@ return  <Routes>
     <Route path="/seller/login" element={<><LoginSignup/></>} />
     <Route path="/seller/addshop" element={<><AddShop/></>} />
     <Route path="/seller/addproduct" element={<AddProduct/>} />
+    <Route path="/seller/shop" element={<Myshop/>} />
+
 </Routes>
 }
 

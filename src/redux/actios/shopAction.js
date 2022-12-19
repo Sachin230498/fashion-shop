@@ -6,7 +6,7 @@ export const Findshop=(creads)=>async (dispatch)=>{
     try{
         let user=JSON.parse(localStorage.getItem("sellerinfo"))
         axios.defaults.headers.common['Authorization'] = user.token ;
-       let shop= await axios.get("http://localhost:8080/shop/myshop",{
+       let shop= await axios.get("https://aakash.onrender.com/shop/myshop",{
 			headers: {
 				'Authorization':user.token 
 			}
@@ -26,7 +26,7 @@ export const addshop=(creads)=>async (dispatch)=>{
     dispatch({type:LODING})
     try{
         
-        await axios.post("http://localhost:8080/shop/register",{...creads})
+        await axios.post("https://aakash.onrender.com/shop/register",{...creads})
         creads.toast({
             title: "Shop Created Successfully",
             description: `welcome ${creads.name} ! thanks for joing Zara`,
@@ -68,11 +68,11 @@ export const addProduct =(creads)=>async (dispatch)=>{
         let user=JSON.parse(localStorage.getItem("sellerinfo"))
         axios.defaults.headers.common['Authorization'] = user.token ;
         console.log(user)
-        await axios.post(`http://localhost:8080/shop/${creads.id}/addproduct`,
+        await axios.post(`https://aakash.onrender.com/shop/${creads.id}/addproduct`,
         {headers: {
             'Authorization':user.token 
         },...creads})
-        let shop= await axios.get("http://localhost:8080/shop/myshop")
+        let shop= await axios.get("https://aakash.onrender.com/shop/myshop")
         creads.toast({
             title: "Product is listed !",
             description: "You can check the shop for more info",
@@ -102,6 +102,6 @@ export const addProduct =(creads)=>async (dispatch)=>{
                 maxWidth: '100%',
               }
           })
-
+          return dispatch({type:ERROR,paylode:e.response.data})
     }
 }

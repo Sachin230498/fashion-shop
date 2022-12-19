@@ -21,9 +21,9 @@ import { Flex, Spacer } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { AuthContext } from "../Context/AuthContext";
 import Dbody from "./Menuburger";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../Components/Sidebar";
 import Gen from "../media/GenChoice.jpeg";
-import Login from "./Login";
+
 import Search from "../Routes/Search"
 
 

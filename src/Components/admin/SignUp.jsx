@@ -78,7 +78,7 @@ function SignUp() {
             <Flex w="100%" gap={3}>
             <Select variant='filled'    onChange={(e)=>handleSignup(e)}
             name='gender' value={creads.gender} >
-            <option value='Male<'>Male</option>
+            <option value='Male'>Male</option>
             <option value='Female'>Female</option>
             </Select>
             <Input

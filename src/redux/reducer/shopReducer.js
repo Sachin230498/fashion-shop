@@ -23,7 +23,7 @@ console.log(state,paylode)
     ...state,islodding:true
     }
     case ERROR:return {
-      ...state,iserror:true
+      ...state,iserror:true,islodding:false
     }
     case CREATESHOP:return {
     ...state,isShop:false,iserror:false,islodding:false,createShop:false

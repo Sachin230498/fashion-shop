@@ -26,9 +26,10 @@ function AddShop() {
       console.log(creads)
       
     }
+    
 
   return (
-    <Box w="60%" m={"auto"} p={10}>
+    <Box w="60%" m={"auto"} p={10} mt={50}>
         <VStack spacing={2}>
         <FormControl isRequired>
             <FormLabel>Shop Name</FormLabel>
